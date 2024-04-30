@@ -48,7 +48,7 @@ Benefícios da computação em nuvem:
 
 Maneiras de interagir com os serviços da AWS:
 - CONSOLE DE GERENCIAMENTO DA AWS
-- AWS COMMAND LINE INTERFACE
+- AWS COMMAND LINE INTERFACE (CLI)
 - KITS DE DESENVOLVIMENTO DE SOFTWARE (SDKS)
 
 Ferramentas de gerenciamento:
