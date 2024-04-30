@@ -1,4 +1,4 @@
-# estudos-aws
+# Estudos AWS
 
 ## Associate developer
 
