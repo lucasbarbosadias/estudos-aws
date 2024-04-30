@@ -16,7 +16,7 @@ Benefícios da computação em nuvem:
 
 ### Computação na Nuvem
 
-**Amazon Elastic Compute Cloud - EC2:** Servidor hospedado na Nuvem, oferece capacidade de processamente flexível e escalável, podemos criar e gerenciar instâncias (máquinas virtuais) com diferentes configurações de hardware e sistemas operacionais.
+**Amazon Elastic Compute Cloud - EC2:** Servidor hospedado na Nuvem, oferece capacidade de processamento flexível e escalável, podemos criar e gerenciar instâncias (máquinas virtuais) com diferentes configurações de hardware e sistemas operacionais.
 
 **Família de instâncias do EC2:**
 - Uso geral
@@ -75,9 +75,9 @@ Redes globais:
 
 **DNS:** Domain name service, basicamente recebe o nome do site e retorna o endereço ip dele.
 
-**Route53:** faz esse serviço do DNS e tbm podemos comprar domínios por ele ou tranferir os comprados por outro site para gerenciar aqui.
+**Route53:** faz esse serviço do DNS e também podemos comprar domínios por ele ou transferir os comprados por outro site para gerenciar aqui.
 
-**Cloudfront:** realiza copias dos conteúdos do meu servidor em cache em vários locais ao redor do mundo (locais de borda) para o cliente acessar do servidor mais próximo, o route53 trabalha em conjunto aqui para direcionar o cliente pro servidor mais eficiente e próximo.
+**Cloudfront:** realiza cópias dos conteúdos do meu servidor em cache em vários locais ao redor do mundo (locais de borda) para o cliente acessar do servidor mais próximo, o route53 trabalha em conjunto aqui para direcionar o cliente para o servidor mais eficiente e próximo.
 
 ### Armazenamento e Banco de dados
 
@@ -86,7 +86,7 @@ Armazena dados em uma única zona de disponibilidade e para anexar uma EC2 a um 
 
 **Snapshot do EBS:** Backup de forma incremental, copia apenas as novas alterações desde o último snapshot.
 
-**Simple Storage Service - S3:** Armazenamento de objetos, consiste em dados, metadados e uma chave. Dados podem ser qualquer tipo de arquivo, metadados contém informações sobre o tipo do dado e tamanho e assim por diante. Chave é seu indentificador único. Dados são armazenados como objetos em buckets.
+**Simple Storage Service - S3:** Armazenamento de objetos, consiste em dados, metadados e uma chave. Dados podem ser qualquer tipo de arquivo, metadados contém informações sobre o tipo do dado e tamanho e assim por diante. Chave é seu identificador único. Dados são armazenados como objetos em buckets.
 Podemos armazenar arquivos de backup, mídia, documentos diversos e espaço ilimitado, tamanho máximo de arquivo para um objeto é de 5tb.
 Possuí permissionamento de visibilidade e acesso aos arquivos e versionamento.
 
@@ -114,9 +114,9 @@ Para escolher uma precisamos considerar:
 
 - **S3 Outposts:** Cria buckets do S3 no Amazon S3 Outposts, torna mais fácil recuperar, armazenar e acessar dados no AWS Outposts. Armazenamento durável e redundante em vários dispositivos e servidores, mantém dados próximos a aplicações on-premises, funciona bem para cargas de trabalho que exigem alto desempenho e a permanência de dados no local.
 
-**Elastic File System - EFS:** No armazenamento de arquivos vários clientes podem acessar os dados em pasta de arquivos compartilhadas, servidor de armazenamento em bloco com sistema de arquivos local para organizar os arquivos, acessados por meio de caminhos de arquivo. Ideal para casos de uso em que um grande número de serviços e recursos precisam acessar os mesmos dados ao mesmo tempo. É dimensionável usado com AWS Cloud Services e recusos on-premises, a medida em que adiciona e remove arquivos o EFS expande e retrai automaticamente. Serviço regional, armazena em várias zonas de disponibilidade e entre elas. Servidores on-premises podem acessar o EFS usando o AWS Direct Connect.
+**Elastic File System - EFS:** No armazenamento de arquivos vários clientes podem acessar os dados em pasta de arquivos compartilhados, servidor de armazenamento em bloco com sistema de arquivos local para organizar os arquivos, acessados por meio de caminhos de arquivo. Ideal para casos de uso em que um grande número de serviços e recursos precisam acessar os mesmos dados ao mesmo tempo. É dimensionável usado com AWS Cloud Services e recusos on-premises, a medida em que adiciona e remove arquivos o EFS expande e retrai automaticamente. Serviço regional, armazena em várias zonas de disponibilidade e entre elas. Servidores on-premises podem acessar o EFS usando o AWS Direct Connect.
 
-**Relational Database Service - RDS:** é um serviço que permite executar bancos de daos relacionais na nuvem AWS. Em um banco de dados relacional, os dados são armazenados de modo que se relacionem a outros dados, usa linguagem de consulta estruturada (SQL).
+**Relational Database Service - RDS:** é um serviço que permite executar bancos de dados relacionais na nuvem AWS. Em um banco de dados relacional, os dados são armazenados de modo que se relacionem a outros dados, usa linguagem de consulta estruturada (SQL).
 O RDS automatiza tarefas como provisão de hardware e configuração do banco de dados, patch e backups. Possuí inúmeras opções de segurança, muitos mecanismos de banco de dados do RDS oferecem criptografia em repouso e trânsito dos dados.
 
 Disponível em seis mecanismos de banco de dados:
@@ -132,13 +132,13 @@ Disponível em seis mecanismos de banco de dados:
 Ajuda a reduzir custos de operações desnecessárias de entrada e saída (E/S), considere o uso para cargas de trabalho que exigem alta disponibilidade, replica seis cópias de dados em 3 zonas de disponibilidade e faz backups contínuos para o S3.
 
 **DynamoDB:** é um serviço de banco de dados chave-valor, com desempenho de um dígito de milissegundos em qualquer scaling. Banco de dados não relacional - NoSQL, usam estruturas diferentes de linhas e colunas, usam pares de chave e valor, os dados são organizados em itens(chaves) e cada item tem um atributo(valor), os itens não precisam ter os mesmos tipos.
-Sem servidor, não precisamos gerenciar. Auto scaling, dimensaionado a medida que seu tamanho expande ou retrai e mantém desempenho consistente, ideal para casos de uso que exigem alto desempenho durante o scaling.
+Sem servidor, não precisamos gerenciar. Auto scaling, dimensionado a medida que seu tamanho expande ou retrai e mantém desempenho consistente, ideal para casos de uso que exigem alto desempenho durante o scaling.
 
 **Amazon Redshift:** serviço de data warehouse que você pode usar para análise de Big Data. Ele oferece a capacidade de coletar dados de muitas fontes além de ajudar a entender relações e tendências em todos os seus dados.
 
 **Database Migration Service - DMS:** permite migrar bancos de dados relacionais e não relacionais e outros tipos de armazenamentos de dados. Permite mover dados entre bancos de dados de origem e de destino. Os bancos de dados de origem e de destino podem ser do mesmo tipo ou de tipos diferentes.
 Durante a migração, o banco de dados de origem permanece operacional, reduzindo o tempo de inatividade em qualquer aplicativo que dependa do banco de dados. Permite a combinação de vários bancos de dados em um único, caso o banco a ser migrado seja de um tipo diferente do destino o DMS converte seus dados para serem migrados corretamente para o destino.
-Permite o desenvolvimento e teste de migrações de banco de dados de produção sem afetar os usuários, realizando uma cópia de produção para ambiente de desenvolvimento. Replição contínua, ele envia cópias dos dados para outras fontes de destino em vez de fazer uma migração única.
+Permite o desenvolvimento e teste de migrações de banco de dados de produção sem afetar os usuários, realizando uma cópia de produção para ambiente de desenvolvimento. Replicação contínua, ele envia cópias dos dados para outras fontes de destino em vez de fazer uma migração única.
 
 **Amazon documentDB:** serviço de banco de dados de documentos compatível com cargas de trabalho do mongoDB (mongoDB é um programa de banco de dados de documentos).
 
@@ -158,7 +158,7 @@ Permite o desenvolvimento e teste de migrações de banco de dados de produção
 - **Clientes:** responsabilidade na nuvem, atualizações de segurança, configurações de rede, permissionamento.
 - **Amazon:** responsabilidade da nuvem, segurança dos data centers, segurança das suas aplicações e serviços.
 
-**Identity and Access Management - IAM:** permitegerenciar acessos e permissões aos serviços e recursos da AWS com segurança. Recursos do IAM:
+**Identity and Access Management - IAM:** permite gerenciar acessos e permissões aos serviços e recursos da AWS com segurança. Recursos do IAM:
 
 - Usuários, grupos e perfis do IAM
 - Políticas do IAM
@@ -213,9 +213,9 @@ O CloudTrail Insights é um recurso opcional que permite o CloudTrail detectar a
 
 **Cobrança consolidada do AWS Organizations:** permite que você receba uma única fatura para todas as contas AWS na sua organização. Ao consolidar, você pode rastrear facilmente os custos combinados de todas as contas vinculadas em sua organização.
 
-**AWS Budgets:** você pode criar orçamentos para planejar o uso do serviço, os custos de serviço e as reservas de instâncias. Coloca que o orçamento mensal é $100 doláres, e um aviso caso chegue em $50, outro para caso chegue em $90, e podemos ver o valor gasto, valor previsto e valor do orçamento por todos os serviços ou filtrado por cada um, o que facilita o acompanhamento dos gastos.
+**AWS Budgets:** você pode criar orçamentos para planejar o uso do serviço, os custos de serviço e as reservas de instâncias. Coloca que o orçamento mensal é $100 dólares, e um aviso caso chegue em $50, outro para caso chegue em $90, e podemos ver o valor gasto, valor previsto e valor do orçamento por todos os serviços ou filtrado por cada um, o que facilita o acompanhamento dos gastos.
 
-**AWS Cost Explorer:** é uma ferramenta que permite visualizar, interpretar e gerenciar seus custos e uso da AWS ao longo do tempo. Lista o valor gasto por cada recurso da AWS, pode filtrar por datas, tags, entre outros para ver relatórios específicos e realizar analise de gastos.
+**AWS Cost Explorer:** é uma ferramenta que permite visualizar, interpretar e gerenciar seus custos e uso da AWS ao longo do tempo. Lista o valor gasto por cada recurso da AWS, pode filtrar por datas, tags, entre outros para ver relatórios específicos e realizar análise de gastos.
 
 **Planos AWS Suporte:** a AWS oferece quatro planos de suporte diferentes para ajudar a solucição de problemas, reduzir custos e usar os serviços da AWS de maneira eficiente:
 
@@ -250,7 +250,7 @@ Em geral, as perspectivas de negócio, pessoas e governança se concentram nos r
 - **refatoração/rearquitetura:** (também conhecida como rearquitetura) envolve reimaginar como uma aplicação é arquitetada e desenvolvida usando recursos nativos da nuvem. A refatoração costuma ser orientada pela forte necessidade que a empresa tem de adicionar recursos, scaling ou desempenho que, de outra forma, seriam difíceis de obter no ambiente atual da aplicação.
 - **recompra:** envolve a mudança de uma licença tradicional para um modelo de software como serviço. 
 - **retenção:** consiste em manter as aplicações essenciais para a empresa no ambiente de origem. Isso pode incluir aplicativos que exigem refatoração importante antes de serem migrados ou trabalhos que podem ser adiados.
-- **retirada:**  é o processo de remoção de aplicações que não são mais necessários.
+- **retirada:**  é o processo de remoção de aplicações que não são mais necessárias.
 
 **AWS Snow Family:** é uma coleção de dispositivos físicos para transporte físico de até exabytes de dados para dentro e para fora da AWS. A AWS é a proprietária e responsável pelo gerenciamento da Snow Family, que integra recursos de segurança, monitoramento, gerenciamento de armazenamento e computação da AWS.
 
@@ -258,7 +258,7 @@ Dispositivos/serviços existentes:
 
 - **AWS Snowcone:** é um dispositivo pequeno, robusto e seguro para transferência de dados e computação de borda. Ele tem 2 CPUs, 4 GB de memória e até 14 TB de armazenamento utilizável.
 - **AWS Snowball:** Aqui existem dois tipos de dispositivos: **Snowball Edge Storage Optimized** são ideais para migrações de dados de grande escala e fluxos de trabalho de transferência recorrentes, em além da computação local com necessidades maiores de capacidade. Armazenamento: 80 TB de capacidade de disco rígido (HDD) para volumes de blocos e armazenamento de objeto compatível com o Amazon S3, além de unidade de estado sólido (SSD) do SATA de 1 TB para volumes de blocos. Computação: 40 vCPUs e 80 GiB de memória para dar suporte a instâncias sbe1 do Amazon EC2 (equivalente a C5). O **Snowball Edge Compute Optimized** fornece recursos de computação poderosos para casos de uso, como machine learning, análise de vídeo em movimento completo, análise e pilhas de computação locais. Armazenamento: capacidade de HDD utilizável de 80 TB para armazenamento de objeto compatível com o Amazon S3 ou volumes de blocos compatíveis com o Amazon EBS e também 28 TB de capacidade de SSD NVMe utilizável para volumes de blocos compatíveis com o Amazon EBS. Computação: 104 vCPUs, 416 GiB de memória e uma GPU NVIDIA Tesla V100 opcional. Os dispositivos executam as instâncias sbe-c e sbe-g do Amazon EC2, que são equivalentes às instâncias C5, M5a, G3 e P3.
-- **AWS Snowmobile:** é um serviço de transferência dados na escala de exabytes usado para mover grandes quantidades de dados para a nuvem AWS. Você pode transferir até 100 petabytes de dados por Snowmobile, um contêiner de transporte reforçado com 13,71 metros de comprimento puxado por um caminhão semirreboque.
+- **AWS Snowmobile:** é um serviço de transferência de dados na escala de exabytes usado para mover grandes quantidades de dados para a nuvem AWS. Você pode transferir até 100 petabytes de dados por Snowmobile, um contêiner de transporte reforçado com 13,71 metros de comprimento puxado por um caminhão semirreboque.
 
 **Inovação com serviços AWS:** Para trabalhar sem servidor na AWS temos o AWS Lambda, para trabalhar com Machine learning temos o Amazon SageMaker que remove o trabalho difícil do processo de criar, treinar e implantar modelos de ML rapidamente. e para trabalhar com Inteligência artificial temos uma variedade de serviços: 
 - Receba recomendações enquanto escreve e identifica problemas de segurança no seu código com o Amazon CodeWhisperer.
