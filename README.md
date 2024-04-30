@@ -22,12 +22,19 @@ Para escolher uma precisamos considerar:
 ```
 
 - **S3 Standard:** para dados acessados com frequência, armazena no mínimo em 3 zonas de disponibilidade.
+
 - **S3 Standard – Infrequent Access (S3 Standard-IA):** Ideal para dados com pouca frequência de acesso, mas que precisam ter alta disponibilidade para quando necessário. Semelhante ao Amazon S3 Standard, mas com um preço de armazenamento mais baixo e um preço de recuperação mais alto. Armazena no mínimo em 3 zonas de disponibilidade.
+
 - **S3 One Zone-Infrequent Access (S3 One Zone – IA):** Armazena dados em uma única Zona de Disponibilidade, tem um preço de armazenamento menor do que o Amazon S3 Standard-IA. É ideal para economizar custos com armazenamento. Você pode reproduzir facilmente seus dados em caso de falha na Zona de Disponibilidade.
+
 - **S3 Intelligent-Tiering:** Ideal para dados com padrões de acesso desconhecidos ou em alteração, requer uma pequena taxa mensal de monitoramento e automação por objeto. S3 monitora e caso não tenha acesso a um objeto por 30 dias ele move o objeto para nível de acesso pouco frequente S3 Standard-IA, mas se acessarmos ele novamente o S3 move para o objeto novamente para o Nível de acesso frequente S3 Standard.
+
 - **S3 Glacier Instant Retrieval:** Funciona bem para dados arquivados que requerem acesso imediato, pode recuperar objetos em alguns milissegundos igual o S3 Standard.
+
 - **S3 Glacier Flexible Retrieval:** Armazenamento de baixo custo projetado para arquivamento de dados, capaz de recuperar objetos em poucos minutos a horas (1m a 12h), ideal para arquivamento de dados.
+
 - **S3 Glacier Deep Archive:** Storage class de objetos de menor custo, ideal para arquivamento, capaz de recuperar objetos de 12 horas a 48 horas. Suporte a retenção de longo prazo e preservação digital de dados acessados uma ou duas vezes por ano. Todos objetos são replicados e armazenados em pelo menos 3 zonas de disponibilidade geograficamente dispersas.
+
 - **S3 Outposts:** Cria buckets do S3 no Amazon S3 Outposts, torna mais fácil recuperar, armazenar e acessar dados no AWS Outposts. Armazenamento durável e redundante em vários dispositivos e servidores, mantém dados próximos a aplicações on-premises, funciona bem para cargas de trabalho que exigem alto desempenho e a permanência de dados no local.
 
 **Elastic File System - EFS:** No armazenamento de arquivos vários clientes podem acessar os dados em pasta de arquivos compartilhadas, servidor de armazenamento em bloco com sistema de arquivos local para organizar os arquivos, acessados por meio de caminhos de arquivo. Ideal para casos de uso em que um grande número de serviços e recursos precisam acessar os mesmos dados ao mesmo tempo. É dimensionável usado com AWS Cloud Services e recusos on-premises, a medida em que adiciona e remove arquivos o EFS expande e retrai automaticamente. Serviço regional, armazena em várias zonas de disponibilidade e entre elas. Servidores on-premises podem acessar o EFS usando o AWS Direct Connect.
@@ -70,11 +77,11 @@ Permite o desenvolvimento e teste de migrações de banco de dados de produção
 
 ### Segurança
 
-Modelo de responsabilidade compartilhada da AWS:
+**Modelo de responsabilidade compartilhada da AWS:**
 - **Clientes:** responsabilidade na nuvem, atualizações de segurança, configurações de rede, permissionamento.
 - **Amazon:** responsabilidade da nuvem, segurança dos data centers, segurança das suas aplicações e serviços.
 
-Identity and Access Management - IAM: permitegerenciar acessos e permissões aos serviços e recursos da AWS com segurança. Recursos do IAM:
+**Identity and Access Management - IAM:** permitegerenciar acessos e permissões aos serviços e recursos da AWS com segurança. Recursos do IAM:
 
 - Usuários, grupos e perfis do IAM
 - Políticas do IAM
