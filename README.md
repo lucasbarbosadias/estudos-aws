@@ -67,3 +67,97 @@ Permite o desenvolvimento e teste de migrações de banco de dados de produção
 **Amazon ElastiCache:** é um serviço que adiciona camadas de cache sobre bancos de dados para ajudar a melhorar os tempos de leitura de solicitações comuns. Ele é compatível com dois tipos de armazenamentos de dados: Redis e Memcached.
 
 **Amazon DynamoDB Accelerator - DAX:** é um cache em memória do DynamoDB, ele ajuda a melhorar os tempos de resposta de milissegundos para microssegundos.
+
+### Segurança
+
+Modelo de responsabilidade compartilhada da AWS:
+- **Clientes:** responsabilidade na nuvem, atualizações de segurança, configurações de rede, permissionamento.
+- **Amazon:** responsabilidade da nuvem, segurança dos data centers, segurança das suas aplicações e serviços.
+
+Identity and Access Management - IAM: permitegerenciar acessos e permissões aos serviços e recursos da AWS com segurança. Recursos do IAM:
+
+- Usuários, grupos e perfis do IAM
+- Políticas do IAM
+- Autenticação multifator
+
+**Usuário do IAM:** é uma identidade que você cria na AWS. Ele representa a pessoa ou o aplicativo que interage com os serviços e recursos AWS. Consiste em um nome e credenciais.
+
+**Política do IAM:** é um documento que concede ou nega permissões para serviços e recursos AWS.  Permite personalizar os níveis de acesso aos usuários dos recursos.
+
+**Grupo do IAM:** é um conjunto de usuários do IAM. Quando você atribui uma política do IAM a um grupo, todos os usuários do grupo recebem permissões especificadas pela política.
+
+**Perfil do IAM:** é uma identidade que você pode assumir para obter acesso *temporário* a permissões, em vez de um acesso de longo prazo.  Utilizada quando um funcionário alterna entre tarefas diferentes, ele abre mão do acesso a uma estação de trabalho e ganha acesso a outra, podendo alternar facilmente entre as estações de trabalho.
+
+**Autenticação com multifator:** é uma camada extra de segurança para sua conta AWS. Por exemplo quando acessamos um site e em seguida pede uma segunda forma de autenticação, como um código aleatório enviado por email ou é solicitado ao usuário que informe a resposta de autenticação de seu dispositivo MFA da AWS. Esse dispositivo pode ser uma chave de segurança de hardware, um dispositivo de hardware ou uma aplicação de MFA em um dispositivo, como um smartphone.
+
+**AWS Organizations:** consolida e gerencia múltiplas contas AWS em um local central. Podemos controlar de maneira centralizada as permissões para as contas em sua organização usando as políticas de controle de serviço (SCPs), como o que cada uma pode acessar. Podemos agrupar contas em unidades organizacionais (UO) para facilitar o gerenciamento de contas com requisitos de negócios ou segurança semelhantes.
+
+**AWS Artifact:** é um serviço que concede acesso sob demanda a relatórios de segurança e conformidade da AWS e a contratos on-line selecionados. Dependendo do setor de sua empresa, talvez seja necessário manter padrões específicos. Uma auditoria ou inspeção assegurará que a empresa cumpriu esses padrões, e para isso usamos o Artifact.
+
+**AWS Artifact Agreements:** podemos ver, aceitar e gerenciar contratos para uma conta individual e para todas as suas contas no AWS Organizations.
+
+**AWS Artifact Reports:** oferece relatórios de conformidade por auditores terceirizados. Esses auditores testaram e verificaram se a AWS está em conformidade com diversas normas e regulamentações de segurança globais, regionais e específicas do setor. Bom para desenvolvedores que estão criando algo e precisam ver se estão seguindo a conformidade com padrões regulatórios.
+AWS possuí o *centro de conformidade para o cliente*, onde contém recursos que ajudam a saber mais sobre a conformidade da AWS, como histórias de clientes e casos de uso.
+
+**AWS Shield:** é um serviço que protege aplicações contra ataques DDoS. O AWS Shield oferece dois níveis de proteção: 
+- **Standard:** protege automaticamente todos os clientes AWS sem nenhum custo. Ele protege seus recursos AWS contra os tipos de ataques DDoS mais comuns e frequentes. 
+- **Advanced:** é um serviço pago que fornece diagnósticos detalhados de ataques e a capacidade de detectar e mitigar ataques elaborados de DDoS. Ele também se integra a outros serviços, como o Amazon CloudFront, o Amazon Route 53 e o Elastic Load Balancing. Além disso, você pode integrar o AWS Shield ao AWS WAF escrevendo regras personalizadas para mitigar ataques complexos de DDoS.
+
+**AWS Key Management Service - AWS KMS**: permite executar operações de criptografia utilizando chaves. As chaves são uma cadeia aleatória de digítos utilizada para criptografar e descriptografar dados. Com o KMS podemos gerenciar essas chaves.
+
+**AWS WAF:** é um firewall de aplicação web que permite monitorar solicitações de rede que entram em aplicações web. Ele trabalha em conjunto com o Amazon CloudFront e um Application Load Balancer. Basicamente ele permite ou bloqueia o tráfego na rede, ele faz isso usando uma lista de controle de acesso (ACL) da web para proteger os recursos da AWS.
+
+**Amazon Inspector:** ajuda a melhorar a segurança e a conformidade das aplicações executando avaliações de segurança automatizadas. Ele verifica os aplicativos quanto a vulnerabilidades de segurança e desvios das práticas recomendadas de segurança, como acesso aberto a instâncias do Amazon EC2 e instalações de versões de software vulneráveis.
+
+**Amazon GuardDuty:** é um serviço que realiza detecção inteligente de ameaças para sua infraestrutura e seus recursos AWS. Ele identifica ameaças monitorando continuamente a atividade da rede e o comportamento da conta no seu ambiente AWS.
+
+**Amazon CloudWatch:** é um serviço da web que permite monitorar e gerenciar várias métricas e configurar ações de alarme de acordo com os dados dessas métricas que vão executar ações automaticamente se o valor da métrica ultrapassar ou for inferior a um limite predefinido. O recurso de painel do CloudWatch permite que você acesse todas as métricas dos seus recursos em um único local.
+
+**AWS CloudTrail:** utilizado para auditoria, com ele podemos rastrear atividades dos usuários e solicitações de APIs em toda infraestrutura da AWS. Filtros por logs para auxiliar análises operacional e solução de problemas. Ele registra informações como chamador da API, hora da chamada da API, endereço IP de origem do chamador da API e muito mais.
+O CloudTrail Insights é um recurso opcional que permite o CloudTrail detectar automaticamente atividades de API incomuns em sua conta AWS.
+
+**AWS Trusted Advisor:** é um serviço da web que inspeciona seu ambiente AWS e faz recomendações em tempo real de acordo com as práticas recomendadas da AWS. Ele faz as verificações seguindo os cinco pilares: otimização de custos, desempenho, segurança, tolerância a falhas e limites de serviço. Para cada um desses ele retorna uma lista de ações recomendadas (vermelho), investigações recomendadas (amarelo) e nenhum problema foi detectado (verde).
+
+**Nível gratuito da AWS:** use determinados serviços sem ter que se preocupar com o custo durante o período especificado. Três tipos de ofertas estão disponíveis: 
+- Sempre gratuito
+- 12 meses gratuitos
+- Versões de teste
+
+**Cobrança consolidada do AWS Organizations:** permite que você receba uma única fatura para todas as contas AWS na sua organização. Ao consolidar, você pode rastrear facilmente os custos combinados de todas as contas vinculadas em sua organização.
+
+**AWS Budgets:** você pode criar orçamentos para planejar o uso do serviço, os custos de serviço e as reservas de instâncias. Coloca que o orçamento mensal é $100 doláres, e um aviso caso chegue em $50, outro para caso chegue em $90, e podemos ver o valor gasto, valor previsto e valor do orçamento por todos os serviços ou filtrado por cada um, o que facilita o acompanhamento dos gastos.
+
+**AWS Cost Explorer:** é uma ferramenta que permite visualizar, interpretar e gerenciar seus custos e uso da AWS ao longo do tempo. Lista o valor gasto por cada recurso da AWS, pode filtrar por datas, tags, entre outros para ver relatórios específicos e realizar analise de gastos.
+
+**Planos AWS Suporte:** a AWS oferece quatro planos de suporte diferentes para ajudar a solucição de problemas, reduzir custos e usar os serviços da AWS de maneira eficiente:
+
+- Basic
+- Desenvolvedor
+- Empresarial
+- Empresarial Rápido
+- Empresarial de Grande Porte
+
+**Technical Account Manager - TAM:** principal ponto de contato com a AWS. Disponível apenas para assinaturas Support Empresarial de Grande Porte ou Empresarial Rápido, o TAM educa, capacita e desenvolve sua jornada para a nuvem em toda a gama de serviços da AWS. Prestam orientação especializada em engenharia, ajuda na projeção de soluções que integram com eficiência os serviços da AWS, auxiliam com arquiteturas econômicas e resilientes e concedem acesso direto aos programas da AWS e a uma ampla comunidade de especialistas.
+
+**AWS Marketplace:** é um catálogo digital com milhares de ofertas de software de provedores independentes de software. Você pode usar o AWS Marketplace para encontrar, testar e comprar software que pode ser executado na AWS.
+
+**AWS Cloud Adoption Framework - AWS CAF:** possuí orientações para cada parte da empresa, sobre o que cada um precisa saber ao realizar uma migração para AWS. As orientações são organizadas em seis áreas de foco chamadas perspectivas. Cada perspectiva aborda responsabilidades distintas. 
+O processo de planejamento ajuda as pessoas certas em toda a organização a se prepararem para as mudanças futuras.
+
+Em geral, as perspectivas de negócio, pessoas e governança se concentram nos recursos comerciais, enquanto as perspectivas de plataforma, segurança e operações se concentram em capacidades técnicas.
+
+- Perspectiva de negócio: Para gerentes de negócios, gerentes financeiros, proprietários de orçamento e stakeholders de estratégia. Garante que a TI esteja alinhada com às necessidades de negócio e que os investimentos em TI estejam vinculados aos principais resultados de negócios.
+- Perspectiva de pessoas: Para recursos humanos, equipe e gerente de pessoas. Promove o desenvolvimento de uma estratégia de alterações em toda organização para adoção bem-sucedida da nuvem.
+- Perspectiva de governança: Para Chief Information Officer (CIO), Gerentes do programa, Enterprise architect, Analistas de negócios e Gerentes de portfólio. Se concentra nas habilidades e processos para alinhar a estratégia de TI à estratégia de negócios. Isso garante que você maximize o valor comercial e minimize os riscos.
+- Perspectiva de plataforma: Para Chief Technology, Officer (CTO), Gerentes de TI e Arquitetos de soluções. Inclui princípios e padrões para implementação de novas soluções na nuvem e migração de cargas de trabalho on-premises para a nuvem.
+- Perspectiva de segurança: Para Chief information security officer (CISO), Gerentes de segurança de TI e Analistas de segurança de TI. Garante que a organização atenda aos objetivos de segurança de visibilidade, auditoria, controle e agilidade.
+- Perspectiva de operações: Para Gerentes de operações de TI e Gerentes de suporte de TI. Ajuda a ativar, executar, usar, operar e recuperar cargas de trabalho de TI para o nível definido com os stakeholders da empresa.
+
+**Seis estratégias de migração (6Rs):** ao migrar aplicações para a nuvem, podemos usar seis das estratégias de migração mais comuns:
+
+- **redefinição de hospedagem:** (também conhecido como "lift-and-shift"), envolve a movimentação de aplicações sem alterações. 
+- **redefinição de plataforma:** (também conhecido como “lift, tinker and shift”) envolve fazer algumas otimizações na nuvem para obter um benefício tangível. A otimização é alcançada sem alterar a arquitetura central do aplicativo.
+- **refatoração/rearquitetura:** (também conhecida como rearquitetura) envolve reimaginar como uma aplicação é arquitetada e desenvolvida usando recursos nativos da nuvem. A refatoração costuma ser orientada pela forte necessidade que a empresa tem de adicionar recursos, scaling ou desempenho que, de outra forma, seriam difíceis de obter no ambiente atual da aplicação.
+- **recompra:** envolve a mudança de uma licença tradicional para um modelo de software como serviço. 
+- **retenção:** consiste em manter as aplicações essenciais para a empresa no ambiente de origem. Isso pode incluir aplicativos que exigem refatoração importante antes de serem migrados ou trabalhos que podem ser adiados.
+- **retirada:**  é o processo de remoção de aplicações que não são mais necessários.
