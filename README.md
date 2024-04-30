@@ -288,3 +288,7 @@ O Well-Architected Framework se baseia em cinco pilares:
 - Aumentar a velocidade e a agilidade.
 - Parar de gastar dinheiro com execução e manutenção de data centers.
 - Ter alcance global em minutos.
+
+#### Fonte:
+
+[Curso Elementos essenciais do AWS Cloud Practitioner](https://explore.skillbuilder.aws/learn/course/8287/play/93778/elementos-essenciais-do-aws-cloud-practitioner-portugues-aws-cloud-practitioner-essentials-portuguese-na)
