@@ -2,7 +2,84 @@
 
 ## Associate developer
 
-### Armazenamento e banco de dados
+### Introdução à Amazon Web Services
+
+**Modelos de implantação de computação em nuvem:** são computação baseada na nuvem, on-premises (local) e híbrida (local e na nuvem).
+
+Benefícios da computação em nuvem:
+- Troque despesas iniciais por despesas variáveis
+- Pare de gastar dinheiro para executar e manter data centers
+- Pare de tentar adivinhar a capacidade
+- Beneficie-se de grandes economias de escala
+- Aumentar a velocidade e a agilidade
+- Ter alcance global em minutos
+
+### Computação na Nuvem
+
+**Amazon Elastic Compute Cloud - EC2:** Servidor hospedado na Nuvem, oferece capacidade de processamente flexível e escalável, podemos criar e gerenciar instâncias (máquinas virtuais) com diferentes configurações de hardware e sistemas operacionais.
+
+**Família de instâncias do EC2:**
+- Uso geral
+- Otimizadas para computação
+- Otimizadas para memória
+- Computação acelerada
+- Otimizadas para armazenamento
+
+**Opções de compra do EC2:**
+- **Sob demanda:** paga apenas pelo uso, sem planos.
+- **Saving plans:** mais barato mas precisa fixar plano de 1 ou 3 anos.
+- **Instâncias reservadas:** carga de trabalho constante, mais barato, plano de 1 ou 3 anos, podendo ser pagamento total antecipado, adiantado parcial ou sem pagamento adiantado.
+- **Instancias spot:** mais barato, porém ela pode ser desligada inesperadamente e ligada também, indicada para trabalhos que podem ser interrompidos.
+- **Hosts dedicados:** são servidores físicos com capacidade totalmente dedicada ao uso do cliente.
+
+**Amazon EC2 Auto Scaling**: abordagens disponíveis:
+- **Scaling dinâmico:** responde às alterações na demanda. 
+- **Scaling preditivo:** programa automaticamente o número correto de instâncias do Amazon EC2 com base na demanda prevista.
+
+**Elastic load balancing - ELD:** distribui automaticamente o tráfego de entrada de aplicações entre vários recursos, como instâncias do Amazon EC2.
+
+**Amazon Elastic Container Service - Amazon ECS:** é um sistema de gerenciamento de contêineres altamente dimensionável e de alto desempenho que permite executar e dimensionar aplicações em contêineres na AWS.
+
+**Amazon Elastic Kubernetes Service - Amazon EKS:** é um serviço totalmente gerenciado que você pode usar para executar o Kubernetes na AWS.
+
+**AWS Fargate:** é um mecanismo de computação sem servidor para contêineres. Ele funciona com o Amazon ECS e o Amazon EKS.
+
+### Infraestrutura global e confiabilidade
+
+Maneiras de interagir com os serviços da AWS:
+- CONSOLE DE GERENCIAMENTO DA AWS
+- AWS COMMAND LINE INTERFACE
+- KITS DE DESENVOLVIMENTO DE SOFTWARE (SDKS)
+
+Ferramentas de gerenciamento:
+
+- **AWS Elastic Beanstalk:** você envia definições de código e configuração, e o Elastic Beanstalk implanta os recursos necessários para executar tarefas.
+
+- **AWS CloudFormation:** sua infraestrutura como código. Pode criar um ambiente escrevendo linhas de código em vez de usar o console de gerenciamento da AWS para provisionar recursos individualmente.
+
+### Redes
+
+**Virtual Private Cloud - VPC:** Podemos criar sub redes públicas e privadas nele, exemplo do caixa da cafeteria público e o barista privada. Para permitir o público acessar minha vpc preciso de um Gateway de internet, caso queira permitir acesso a minha vpc apenas recursos privados preciso de um Gateway privado virtual.
+
+**AWS direct connect:** é uma conexão da minha empresa diretamente com a AWS sem passar pela internet normal.
+
+**VPN virtual private network:** aí acessaria a AWS pela internet normal só que com "seguranças" pelo caminho, que seria a criptografia.
+
+**Controle de acesso:** uma sub rede é uma seção de uma VPC que posso agrupar recursos da AWS, podendo ser pública ou privada.
+
+**ACLs de rede - lista de controle de acesso:** é um firewall da sub rede que controla o tráfego, igual aos oficiais que controlam os passaportes de quem pode acessar o país, quem está na lista aprovada acessa e quem não está na lista ou está em uma recusada não pode acessar, por padrão ela permite todo o tráfego de entrada e saída, se customizar ela bloqueia tudo e só libera o que adicionar na configuração. Ela filtra os pacotes de forma stateless onde pede permissão para entrar e para sair.
+
+**Grupo de segurança:** firewall da EC2, controla o tráfego de entrada e saída e por padrão nega todo o tráfego de entrada, pode adicionar regras personalizadas para o tráfego que será permitido. Filtra os pacotes no modelo stateful, verifica a entrada e a saída não.
+
+Redes globais:
+
+**DNS:** Domain name service, basicamente recebe o nome do site e retorna o endereço ip dele.
+
+**Route53:** faz esse serviço do DNS e tbm podemos comprar domínios por ele ou tranferir os comprados por outro site para gerenciar aqui.
+
+**Cloudfront:** realiza copias dos conteúdos do meu servidor em cache em vários locais ao redor do mundo (locais de borda) para o cliente acessar do servidor mais próximo, o route53 trabalha em conjunto aqui para direcionar o cliente pro servidor mais eficiente e próximo.
+
+### Armazenamento e Banco de dados
 
 **Elastic Block Store - EBS:** é um meio temporário de armazenamento a nível de bloco para uma instância do EC2, disco físico anexado ao computador host para um EC2, caso a EC2 seja encerrada perdemos o conteúdo armazenado.
 Armazena dados em uma única zona de disponibilidade e para anexar uma EC2 a um volume do EBS precisam estar na mesma zona de disponibilidade.
@@ -118,12 +195,16 @@ AWS possuí o *centro de conformidade para o cliente*, onde contém recursos que
 
 **Amazon GuardDuty:** é um serviço que realiza detecção inteligente de ameaças para sua infraestrutura e seus recursos AWS. Ele identifica ameaças monitorando continuamente a atividade da rede e o comportamento da conta no seu ambiente AWS.
 
+### Monitoramento e Análise
+
 **Amazon CloudWatch:** é um serviço da web que permite monitorar e gerenciar várias métricas e configurar ações de alarme de acordo com os dados dessas métricas que vão executar ações automaticamente se o valor da métrica ultrapassar ou for inferior a um limite predefinido. O recurso de painel do CloudWatch permite que você acesse todas as métricas dos seus recursos em um único local.
 
 **AWS CloudTrail:** utilizado para auditoria, com ele podemos rastrear atividades dos usuários e solicitações de APIs em toda infraestrutura da AWS. Filtros por logs para auxiliar análises operacional e solução de problemas. Ele registra informações como chamador da API, hora da chamada da API, endereço IP de origem do chamador da API e muito mais.
 O CloudTrail Insights é um recurso opcional que permite o CloudTrail detectar automaticamente atividades de API incomuns em sua conta AWS.
 
 **AWS Trusted Advisor:** é um serviço da web que inspeciona seu ambiente AWS e faz recomendações em tempo real de acordo com as práticas recomendadas da AWS. Ele faz as verificações seguindo os cinco pilares: otimização de custos, desempenho, segurança, tolerância a falhas e limites de serviço. Para cada um desses ele retorna uma lista de ações recomendadas (vermelho), investigações recomendadas (amarelo) e nenhum problema foi detectado (verde).
+
+### Definição de preços e suporte
 
 **Nível gratuito da AWS:** use determinados serviços sem ter que se preocupar com o custo durante o período especificado. Três tipos de ofertas estão disponíveis: 
 - Sempre gratuito
@@ -148,17 +229,19 @@ O CloudTrail Insights é um recurso opcional que permite o CloudTrail detectar a
 
 **AWS Marketplace:** é um catálogo digital com milhares de ofertas de software de provedores independentes de software. Você pode usar o AWS Marketplace para encontrar, testar e comprar software que pode ser executado na AWS.
 
+### Migração e Inovação
+
 **AWS Cloud Adoption Framework - AWS CAF:** possuí orientações para cada parte da empresa, sobre o que cada um precisa saber ao realizar uma migração para AWS. As orientações são organizadas em seis áreas de foco chamadas perspectivas. Cada perspectiva aborda responsabilidades distintas. 
 O processo de planejamento ajuda as pessoas certas em toda a organização a se prepararem para as mudanças futuras.
 
 Em geral, as perspectivas de negócio, pessoas e governança se concentram nos recursos comerciais, enquanto as perspectivas de plataforma, segurança e operações se concentram em capacidades técnicas.
 
-- Perspectiva de negócio: Para gerentes de negócios, gerentes financeiros, proprietários de orçamento e stakeholders de estratégia. Garante que a TI esteja alinhada com às necessidades de negócio e que os investimentos em TI estejam vinculados aos principais resultados de negócios.
-- Perspectiva de pessoas: Para recursos humanos, equipe e gerente de pessoas. Promove o desenvolvimento de uma estratégia de alterações em toda organização para adoção bem-sucedida da nuvem.
-- Perspectiva de governança: Para Chief Information Officer (CIO), Gerentes do programa, Enterprise architect, Analistas de negócios e Gerentes de portfólio. Se concentra nas habilidades e processos para alinhar a estratégia de TI à estratégia de negócios. Isso garante que você maximize o valor comercial e minimize os riscos.
-- Perspectiva de plataforma: Para Chief Technology, Officer (CTO), Gerentes de TI e Arquitetos de soluções. Inclui princípios e padrões para implementação de novas soluções na nuvem e migração de cargas de trabalho on-premises para a nuvem.
-- Perspectiva de segurança: Para Chief information security officer (CISO), Gerentes de segurança de TI e Analistas de segurança de TI. Garante que a organização atenda aos objetivos de segurança de visibilidade, auditoria, controle e agilidade.
-- Perspectiva de operações: Para Gerentes de operações de TI e Gerentes de suporte de TI. Ajuda a ativar, executar, usar, operar e recuperar cargas de trabalho de TI para o nível definido com os stakeholders da empresa.
+- **Perspectiva de negócio:** Para gerentes de negócios, gerentes financeiros, proprietários de orçamento e stakeholders de estratégia. Garante que a TI esteja alinhada com às necessidades de negócio e que os investimentos em TI estejam vinculados aos principais resultados de negócios.
+- **Perspectiva de pessoas:** Para recursos humanos, equipe e gerente de pessoas. Promove o desenvolvimento de uma estratégia de alterações em toda organização para adoção bem-sucedida da nuvem.
+- **Perspectiva de governança:** Para Chief Information Officer (CIO), Gerentes do programa, Enterprise architect, Analistas de negócios e Gerentes de portfólio. Se concentra nas habilidades e processos para alinhar a estratégia de TI à estratégia de negócios. Isso garante que você maximize o valor comercial e minimize os riscos.
+- **Perspectiva de plataforma:** Para Chief Technology, Officer (CTO), Gerentes de TI e Arquitetos de soluções. Inclui princípios e padrões para implementação de novas soluções na nuvem e migração de cargas de trabalho on-premises para a nuvem.
+- **Perspectiva de segurança:** Para Chief information security officer (CISO), Gerentes de segurança de TI e Analistas de segurança de TI. Garante que a organização atenda aos objetivos de segurança de visibilidade, auditoria, controle e agilidade.
+- **Perspectiva de operações:** Para Gerentes de operações de TI e Gerentes de suporte de TI. Ajuda a ativar, executar, usar, operar e recuperar cargas de trabalho de TI para o nível definido com os stakeholders da empresa.
 
 **Seis estratégias de migração (6Rs):** ao migrar aplicações para a nuvem, podemos usar seis das estratégias de migração mais comuns:
 
@@ -184,18 +267,21 @@ Dispositivos/serviços existentes:
 - Identificar atividades on-line potencialmente fraudulentas com o Amazon Fraud Detector.
 - Criar chatbots de voz e texto com o Amazon Lex.
 
+### Jornada para nuvem
+
 **AWS Well-Architected Framework:** ajuda você a entender como projetar e operar sistemas confiáveis, seguros, eficientes e econômicos na nuvem AWS. Com ele, é possível avaliar de maneira consistente suas arquiteturas em relação às práticas recomendadas e aos princípios de projeto e a identificar áreas para melhorias.
 
 O Well-Architected Framework se baseia em cinco pilares: 
 
-- Excelência operacional: é a capacidade de executar e monitorar sistemas para entregar valor comercial e melhorar continuamente os processos e procedimentos de apoio.
-- Segurança: inclui a capacidade de proteger informações, sistemas e ativos e, ao mesmo tempo, entregar valor comercial por meio de avaliações de risco e estratégias de mitigação. 
-- Confiabilidade: é a capacidade de um sistema recuperar-se de interrupções na infraestrutura ou no serviço, adquirir dinamicamente recursos de computação para atender à demanda e reduzir interrupções, como configurações incorretas ou problemas de rede transitórios.
-- Eficiência de desempenho: é a capacidade de usar recursos computacionais com eficiência para cumprir requisitos do sistema e manter essa eficiência à medida que a demanda muda e as tecnologias evoluem. 
-- Otimização de custos:  é a capacidade de executar sistemas para entregar valor comercial com o menor preço.
-- Sustentabilidade:  é a capacidade de melhorar continuamente os impactos da sustentabilidade, reduzindo o consumo de energia e aumentando a eficiência em todos os componentes de uma carga de trabalho, maximizando os benefícios dos recursos provisionados e minimizando o total de recursos necessários.
+- **Excelência operacional:** é a capacidade de executar e monitorar sistemas para entregar valor comercial e melhorar continuamente os processos e procedimentos de apoio.
+- **Segurança:** inclui a capacidade de proteger informações, sistemas e ativos e, ao mesmo tempo, entregar valor comercial por meio de avaliações de risco e estratégias de mitigação. 
+- **Confiabilidade:** é a capacidade de um sistema recuperar-se de interrupções na infraestrutura ou no serviço, adquirir dinamicamente recursos de computação para atender à demanda e reduzir interrupções, como configurações incorretas ou problemas de rede transitórios.
+- **Eficiência de desempenho:** é a capacidade de usar recursos computacionais com eficiência para cumprir requisitos do sistema e manter essa eficiência à medida que a demanda muda e as tecnologias evoluem. 
+- **Otimização de custos:** é a capacidade de executar sistemas para entregar valor comercial com o menor preço.
+- **Sustentabilidade:** é a capacidade de melhorar continuamente os impactos da sustentabilidade, reduzindo o consumo de energia e aumentando a eficiência em todos os componentes de uma carga de trabalho, maximizando os benefícios dos recursos provisionados e minimizando o total de recursos necessários.
 
 **Vantagens da computação em nuvem:** Operar na nuvem AWS oferece muitos benefícios em relação à computação em ambientes on-premises ou híbridos, entre eles:
+
 - Trocar despesa antecipada por despesas variáveis.
 - Benefícios de enormes economias de escala.
 - Parar de tentar adivinhar a capacidade.
