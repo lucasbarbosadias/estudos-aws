@@ -168,3 +168,37 @@ Em geral, as perspectivas de negócio, pessoas e governança se concentram nos r
 - **recompra:** envolve a mudança de uma licença tradicional para um modelo de software como serviço. 
 - **retenção:** consiste em manter as aplicações essenciais para a empresa no ambiente de origem. Isso pode incluir aplicativos que exigem refatoração importante antes de serem migrados ou trabalhos que podem ser adiados.
 - **retirada:**  é o processo de remoção de aplicações que não são mais necessários.
+
+**AWS Snow Family:** é uma coleção de dispositivos físicos para transporte físico de até exabytes de dados para dentro e para fora da AWS. A AWS é a proprietária e responsável pelo gerenciamento da Snow Family, que integra recursos de segurança, monitoramento, gerenciamento de armazenamento e computação da AWS.
+
+Dispositivos/serviços existentes:
+
+- **AWS Snowcone:** é um dispositivo pequeno, robusto e seguro para transferência de dados e computação de borda. Ele tem 2 CPUs, 4 GB de memória e até 14 TB de armazenamento utilizável.
+- **AWS Snowball:** Aqui existem dois tipos de dispositivos: **Snowball Edge Storage Optimized** são ideais para migrações de dados de grande escala e fluxos de trabalho de transferência recorrentes, em além da computação local com necessidades maiores de capacidade. Armazenamento: 80 TB de capacidade de disco rígido (HDD) para volumes de blocos e armazenamento de objeto compatível com o Amazon S3, além de unidade de estado sólido (SSD) do SATA de 1 TB para volumes de blocos. Computação: 40 vCPUs e 80 GiB de memória para dar suporte a instâncias sbe1 do Amazon EC2 (equivalente a C5). O **Snowball Edge Compute Optimized** fornece recursos de computação poderosos para casos de uso, como machine learning, análise de vídeo em movimento completo, análise e pilhas de computação locais. Armazenamento: capacidade de HDD utilizável de 80 TB para armazenamento de objeto compatível com o Amazon S3 ou volumes de blocos compatíveis com o Amazon EBS e também 28 TB de capacidade de SSD NVMe utilizável para volumes de blocos compatíveis com o Amazon EBS. Computação: 104 vCPUs, 416 GiB de memória e uma GPU NVIDIA Tesla V100 opcional. Os dispositivos executam as instâncias sbe-c e sbe-g do Amazon EC2, que são equivalentes às instâncias C5, M5a, G3 e P3.
+- **AWS Snowmobile:** é um serviço de transferência dados na escala de exabytes usado para mover grandes quantidades de dados para a nuvem AWS. Você pode transferir até 100 petabytes de dados por Snowmobile, um contêiner de transporte reforçado com 13,71 metros de comprimento puxado por um caminhão semirreboque.
+
+**Inovação com serviços AWS:** Para trabalhar sem servidor na AWS temos o AWS Lambda, para trabalhar com Machine learning temos o Amazon SageMaker que remove o trabalho difícil do processo de criar, treinar e implantar modelos de ML rapidamente. e para trabalhar com Inteligência artificial temos uma variedade de serviços: 
+- Receba recomendações enquanto escreve e identifica problemas de segurança no seu código com o Amazon CodeWhisperer.
+- Converter fala em texto com o Amazon Transcribe.
+- Descobrir padrões em texto com o Amazon Comprehend.
+- Identificar atividades on-line potencialmente fraudulentas com o Amazon Fraud Detector.
+- Criar chatbots de voz e texto com o Amazon Lex.
+
+**AWS Well-Architected Framework:** ajuda você a entender como projetar e operar sistemas confiáveis, seguros, eficientes e econômicos na nuvem AWS. Com ele, é possível avaliar de maneira consistente suas arquiteturas em relação às práticas recomendadas e aos princípios de projeto e a identificar áreas para melhorias.
+
+O Well-Architected Framework se baseia em cinco pilares: 
+
+- Excelência operacional: é a capacidade de executar e monitorar sistemas para entregar valor comercial e melhorar continuamente os processos e procedimentos de apoio.
+- Segurança: inclui a capacidade de proteger informações, sistemas e ativos e, ao mesmo tempo, entregar valor comercial por meio de avaliações de risco e estratégias de mitigação. 
+- Confiabilidade: é a capacidade de um sistema recuperar-se de interrupções na infraestrutura ou no serviço, adquirir dinamicamente recursos de computação para atender à demanda e reduzir interrupções, como configurações incorretas ou problemas de rede transitórios.
+- Eficiência de desempenho: é a capacidade de usar recursos computacionais com eficiência para cumprir requisitos do sistema e manter essa eficiência à medida que a demanda muda e as tecnologias evoluem. 
+- Otimização de custos:  é a capacidade de executar sistemas para entregar valor comercial com o menor preço.
+- Sustentabilidade:  é a capacidade de melhorar continuamente os impactos da sustentabilidade, reduzindo o consumo de energia e aumentando a eficiência em todos os componentes de uma carga de trabalho, maximizando os benefícios dos recursos provisionados e minimizando o total de recursos necessários.
+
+**Vantagens da computação em nuvem:** Operar na nuvem AWS oferece muitos benefícios em relação à computação em ambientes on-premises ou híbridos, entre eles:
+- Trocar despesa antecipada por despesas variáveis.
+- Benefícios de enormes economias de escala.
+- Parar de tentar adivinhar a capacidade.
+- Aumentar a velocidade e a agilidade.
+- Parar de gastar dinheiro com execução e manutenção de data centers.
+- Ter alcance global em minutos.
