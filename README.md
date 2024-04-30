@@ -1,6 +1,6 @@
 # Estudos AWS
 
-## Associate developer
+## Associate developer - AWS Certified Cloud Practitioner
 
 ### Introdução à Amazon Web Services
 
