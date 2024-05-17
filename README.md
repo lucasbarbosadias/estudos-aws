@@ -3,6 +3,7 @@
 ## Associate developer - AWS Certified Cloud Practitioner
 
 ### Introdução à Amazon Web Services
+---
 
 **Modelos de implantação de computação em nuvem:** são computação baseada na nuvem, on-premises (local) e híbrida (local e na nuvem).
 
@@ -15,6 +16,7 @@ Benefícios da computação em nuvem:
 - Ter alcance global em minutos
 
 ### Computação na Nuvem
+---
 
 **Amazon Elastic Compute Cloud - EC2:** Servidor hospedado na Nuvem, oferece capacidade de processamento flexível e escalável, podemos criar e gerenciar instâncias (máquinas virtuais) com diferentes configurações de hardware e sistemas operacionais.
 
@@ -32,6 +34,8 @@ Benefícios da computação em nuvem:
 - **Instancias spot:** mais barato, porém ela pode ser desligada inesperadamente e ligada também, indicada para trabalhos que podem ser interrompidos.
 - **Hosts dedicados:** são servidores físicos com capacidade totalmente dedicada ao uso do cliente.
 
+**AWS AMI - Amazon Machine Images:** são pré-configurações de uma lista de sistemas operacionais para a instalação instantânea em instâncias EC2.
+
 **Amazon EC2 Auto Scaling**: abordagens disponíveis:
 - **Scaling dinâmico:** responde às alterações na demanda. 
 - **Scaling preditivo:** programa automaticamente o número correto de instâncias do Amazon EC2 com base na demanda prevista.
@@ -45,6 +49,7 @@ Benefícios da computação em nuvem:
 **AWS Fargate:** é um mecanismo de computação sem servidor para contêineres. Ele funciona com o Amazon ECS e o Amazon EKS.
 
 ### Infraestrutura global e confiabilidade
+---
 
 Maneiras de interagir com os serviços da AWS:
 - CONSOLE DE GERENCIAMENTO DA AWS
@@ -58,6 +63,7 @@ Ferramentas de gerenciamento:
 - **AWS CloudFormation:** sua infraestrutura como código. Pode criar um ambiente escrevendo linhas de código em vez de usar o console de gerenciamento da AWS para provisionar recursos individualmente.
 
 ### Redes
+---
 
 **Virtual Private Cloud - VPC:** Podemos criar sub redes públicas e privadas nele, exemplo do caixa da cafeteria público e o barista privada. Para permitir o público acessar minha vpc preciso de um Gateway de internet, caso queira permitir acesso a minha vpc apenas recursos privados preciso de um Gateway privado virtual.
 
@@ -71,6 +77,8 @@ Ferramentas de gerenciamento:
 
 **Grupo de segurança:** firewall da EC2, controla o tráfego de entrada e saída e por padrão nega todo o tráfego de entrada, pode adicionar regras personalizadas para o tráfego que será permitido. Filtra os pacotes no modelo stateful, verifica a entrada e a saída não.
 
+**Elastic IP da AWS:** é um endereço IP estático que pode ser associado a instâncias EC2 e balanceadores de carga. Ele permite manter um IP consistente, mesmo após a parada ou reinicialização da instância.
+
 Redes globais:
 
 **DNS:** Domain name service, basicamente recebe o nome do site e retorna o endereço ip dele.
@@ -80,6 +88,7 @@ Redes globais:
 **Cloudfront:** realiza cópias dos conteúdos do meu servidor em cache em vários locais ao redor do mundo (locais de borda) para o cliente acessar do servidor mais próximo, o route53 trabalha em conjunto aqui para direcionar o cliente para o servidor mais eficiente e próximo.
 
 ### Armazenamento e Banco de dados
+---
 
 **Elastic Block Store - EBS:** é um meio temporário de armazenamento a nível de bloco para uma instância do EC2, disco físico anexado ao computador host para um EC2, caso a EC2 seja encerrada perdemos o conteúdo armazenado.
 Armazena dados em uma única zona de disponibilidade e para anexar uma EC2 a um volume do EBS precisam estar na mesma zona de disponibilidade.
@@ -114,6 +123,10 @@ Para escolher uma precisamos considerar:
 
 - **S3 Outposts:** Cria buckets do S3 no Amazon S3 Outposts, torna mais fácil recuperar, armazenar e acessar dados no AWS Outposts. Armazenamento durável e redundante em vários dispositivos e servidores, mantém dados próximos a aplicações on-premises, funciona bem para cargas de trabalho que exigem alto desempenho e a permanência de dados no local.
 
+**Ciclo de vida do Amazon S3:** criação, possível transição para classes de armazenamento mais baratas, acesso contínuo, expiração automática e, finalmente, exclusão de objetos, permitindo uma gestão eficiente do armazenamento.
+
+**AWS Athena:** serviço serverless que permite a realização de consultas utilizando SQL em Buckets do S3.
+
 **Elastic File System - EFS:** No armazenamento de arquivos vários clientes podem acessar os dados em pasta de arquivos compartilhados, servidor de armazenamento em bloco com sistema de arquivos local para organizar os arquivos, acessados por meio de caminhos de arquivo. Ideal para casos de uso em que um grande número de serviços e recursos precisam acessar os mesmos dados ao mesmo tempo. É dimensionável usado com AWS Cloud Services e recusos on-premises, a medida em que adiciona e remove arquivos o EFS expande e retrai automaticamente. Serviço regional, armazena em várias zonas de disponibilidade e entre elas. Servidores on-premises podem acessar o EFS usando o AWS Direct Connect.
 
 **Relational Database Service - RDS:** é um serviço que permite executar bancos de dados relacionais na nuvem AWS. Em um banco de dados relacional, os dados são armazenados de modo que se relacionem a outros dados, usa linguagem de consulta estruturada (SQL).
@@ -127,6 +140,8 @@ Disponível em seis mecanismos de banco de dados:
 - MariaDB
 - Oracle Database
 - Microsoft SQL Server
+
+**Read Replicas no Amazon RDS:** são cópias de leitura de bancos de dados que oferecem escalabilidade e desempenho aprimorados. Elas permitem que os dados sejam replicados de um banco de dados de origem para várias réplicas de leitura. As Read Replicas são usadas para distribuir o tráfego de leitura, aliviando a carga do banco de dados de origem e melhorando a resposta a consultas.
 
 **Amazon Aurora:** é um banco de dados relacional de nível empresarial, compatível com bancos de dados relacionais MySQL e PostgreSQL, até 5 vezes mais rápido do que os bancos MySQL comuns e até 3 vezes mais rápido que os bancos de dados PostgreSQL comuns.
 Ajuda a reduzir custos de operações desnecessárias de entrada e saída (E/S), considere o uso para cargas de trabalho que exigem alta disponibilidade, replica seis cópias de dados em 3 zonas de disponibilidade e faz backups contínuos para o S3.
@@ -152,7 +167,9 @@ Permite o desenvolvimento e teste de migrações de banco de dados de produção
 
 **Amazon DynamoDB Accelerator - DAX:** é um cache em memória do DynamoDB, ele ajuda a melhorar os tempos de resposta de milissegundos para microssegundos.
 
+
 ### Segurança
+---
 
 **Modelo de responsabilidade compartilhada da AWS:**
 - **Clientes:** responsabilidade na nuvem, atualizações de segurança, configurações de rede, permissionamento.
@@ -196,6 +213,7 @@ AWS possuí o *centro de conformidade para o cliente*, onde contém recursos que
 **Amazon GuardDuty:** é um serviço que realiza detecção inteligente de ameaças para sua infraestrutura e seus recursos AWS. Ele identifica ameaças monitorando continuamente a atividade da rede e o comportamento da conta no seu ambiente AWS.
 
 ### Monitoramento e Análise
+---
 
 **Amazon CloudWatch:** é um serviço da web que permite monitorar e gerenciar várias métricas e configurar ações de alarme de acordo com os dados dessas métricas que vão executar ações automaticamente se o valor da métrica ultrapassar ou for inferior a um limite predefinido. O recurso de painel do CloudWatch permite que você acesse todas as métricas dos seus recursos em um único local.
 
@@ -205,6 +223,7 @@ O CloudTrail Insights é um recurso opcional que permite o CloudTrail detectar a
 **AWS Trusted Advisor:** é um serviço da web que inspeciona seu ambiente AWS e faz recomendações em tempo real de acordo com as práticas recomendadas da AWS. Ele faz as verificações seguindo os cinco pilares: otimização de custos, desempenho, segurança, tolerância a falhas e limites de serviço. Para cada um desses ele retorna uma lista de ações recomendadas (vermelho), investigações recomendadas (amarelo) e nenhum problema foi detectado (verde).
 
 ### Definição de preços e suporte
+---
 
 **Nível gratuito da AWS:** use determinados serviços sem ter que se preocupar com o custo durante o período especificado. Três tipos de ofertas estão disponíveis: 
 - Sempre gratuito
@@ -230,6 +249,7 @@ O CloudTrail Insights é um recurso opcional que permite o CloudTrail detectar a
 **AWS Marketplace:** é um catálogo digital com milhares de ofertas de software de provedores independentes de software. Você pode usar o AWS Marketplace para encontrar, testar e comprar software que pode ser executado na AWS.
 
 ### Migração e Inovação
+---
 
 **AWS Cloud Adoption Framework - AWS CAF:** possuí orientações para cada parte da empresa, sobre o que cada um precisa saber ao realizar uma migração para AWS. As orientações são organizadas em seis áreas de foco chamadas perspectivas. Cada perspectiva aborda responsabilidades distintas. 
 O processo de planejamento ajuda as pessoas certas em toda a organização a se prepararem para as mudanças futuras.
@@ -268,6 +288,7 @@ Dispositivos/serviços existentes:
 - Criar chatbots de voz e texto com o Amazon Lex.
 
 ### Jornada para nuvem
+---
 
 **AWS Well-Architected Framework:** ajuda você a entender como projetar e operar sistemas confiáveis, seguros, eficientes e econômicos na nuvem AWS. Com ele, é possível avaliar de maneira consistente suas arquiteturas em relação às práticas recomendadas e aos princípios de projeto e a identificar áreas para melhorias.
 
@@ -289,6 +310,64 @@ O Well-Architected Framework se baseia em cinco pilares:
 - Parar de gastar dinheiro com execução e manutenção de data centers.
 - Ter alcance global em minutos.
 
-#### Fonte:
+### Serviços complementares para prova
+---
 
-[Curso Elementos essenciais do AWS Cloud Practitioner](https://explore.skillbuilder.aws/learn/course/8287/play/93778/elementos-essenciais-do-aws-cloud-practitioner-portugues-aws-cloud-practitioner-essentials-portuguese-na)
+**AWS EventiBridge (eventos):** é um barramento de eventos sem servidor que torna mais fácil a criação de aplicações orientadas por eventos em escala usando eventos gerados com base em suas aplicações, aplicações integradas de software como serviço (SaaS) e serviços da AWS.
+
+**AWS Data Exchange:** foi projetado para permitir que organizações descubram, acessem e compartilhem conjuntos de dados prontos para uso na nuvem. Sua função principal é facilitar a aquisição de dados de terceiros, como informações de mercado, financeiras ou de pesquisa, e disponibilizá-los de maneira segura para análises e uso posterior.
+
+**AWS CloudFormation:** serviço de infraestrutura como código (IAC) que permite definir e provisionar recursos na nuvem de forma automatizada.
+
+**AWS IQ:** permite que os clientes encontrem, contratem e paguem rapidamente especialistas terceirizados certificados pela AWS para trabalhos sob demanda em um projeto.
+
+**AWS CloudSearch:** serviço que permite a implementação de uma funcionalidade busca dentro do seu site na AWS.
+
+**AWS ElasticSearch:** serviço para armazenar, analisar e correlacionar uma grande quantidade de dados de logs de seus aplicativos para identificar e resolver gargalos de desempenho e problemas de disponibilidade. OpenSearch é uma bifurcação do Elasticsearch e Kibana de código aberto, licenciada sob a ALv2 e orientada pela comunidade.
+
+**AWS Batch:** possibilita que desenvolvedores, cientistas e engenheiros executem de modo fácil e eficiente centenas de milhares de tarefas de computação em lote na AWS.
+
+**AWS Kinesis:** serviço utilizado para coletar uma grande quantidade de aplicativos transferindo para outros serviços através de streaming.
+
+**AWS OpsWorks:** serviço de gerenciamento de configurações que oferece instâncias gerenciadas do Chef e do Puppet. O Chef e o Puppet são plataformas de automação que permitem usar código para automatizar a configuração de servidores. O OpsWorks permite usar o Chef e o Puppet para automatizar a forma como os servidores são configurados, implantados e gerenciados em instâncias do Amazon EC2 ou ambientes de computação no local.
+
+**AWS Wavelength:** é uma região geográfica especializada da AWS que fornece infraestrutura de computação na borda das redes de telecomunicações. Ele é projetado para permitir a execução de cargas de trabalho de baixa latência, reduzindo o tempo de ida e volta entre os aplicativos e os usuários finais.
+
+**AWS Cloud9:** é um Ambiente de Desenvolvimento Integrado (IDE) fornecido pela AWS, permitindo que os desenvolvedores escrevam, executem e depurem código utilizando apenas um navegador web. Essa plataforma baseada na nuvem oferece uma experiência completa de desenvolvimento, incluindo editor de código, terminal, e recursos de depuração, facilitando o desenvolvimento de aplicativos diretamente do navegador, eliminando a necessidade de configurações locais complexas.
+
+**AWS Glue:** é um serviço de ETL (Extração, Transformação e Carga) gerenciado que automatiza a preparação e transformação de dados para análises. Ele pode ser usado para converter arquivos que trafegam entre sistemas, como transformar dados brutos em formatos prontos para análise. O Glue oferece uma interface visual para criar fluxos de trabalho ETL, mas também suporta scripts em PySpark ou Scala.
+
+**AWS DataSync:** é utilizado para realizar a sincronização automática entre dados da infraestrutura on premise e da AWS.
+
+**AWS Compute Optimizer:** utiliza o aprendizado de máquina (machine learning) para identificar configurações ideais de recursos na AWS, analisando métricas de utilização, como instâncias do EC2, volumes do EBS, tarefas do ECS no AWS Fargate e memória do AWS Lambda, analisando métricas de utilização. Ele oferece sugestões intuitivas e simples de implementar para melhorar o desempenho e reduzir despesas em cargas de trabalho na AWS.
+
+**Amazon Macie:** é um serviço de segurança e privacidade de dados totalmente gerenciado que usa machine learning e correspondência de padrões para descobrir e proteger seus dados confidenciais na AWS. À medida que as organizações gerenciam volumes crescentes de dados, identificar e proteger seus dados confidenciais em escala pode se tornar cada vez mais complexo, caro e demorado. O Amazon Macie automatiza a descoberta de dados confidenciais em escala e reduz o custo da proteção de seus dados
+
+**AWS Storage Gateway:** é um conjunto de serviços de nuvem híbrida que oferece acesso on-premises a armazenamento na nuvem praticamente ilimitado. Os clientes usam o Storage Gateway para integrar o armazenamento da Nuvem AWS com workloads locais para que possam simplificar o gerenciamento do armazenamento e reduzir os custos de casos de uso de armazenamento fundamentais na nuvem híbrida.
+
+**AWS account root user:** é o usuário que possui acesso a todos os recursos da conta, que é utilizado para acessar o AWS Console pela primeira vez, mas  não é recomendado para uso no dia a dia.
+
+Sequência lógica da esteira de desenvolvimento:
+  - **CodeCommit:** Gerenciamento das fontes através de funções do Git.
+  - **CodeBuild:** Compilação e Testes automatizados.
+  - **CodeDeploy:** Implantação.
+Os serviços apresentados são orquestrados através do serviço CodePipeline, que é a esteira que integra todos os serviços mencionados na questão.
+
+**Tipo de uso de cloud:**
+- **IaaS - Infraestrutura como serviço:** Neste modelo, o cliente precisa gerenciar todos os recursos que precisa implementar na cloud.
+- **PaaS - Plataforma como serviço:** Neste modelo, o cliente só precisa desenvolver o software sobre a plataforma.
+- **SaaS - Software como serviço:** Neste modelo, o cliente usa o software pronto.
+- **BaaS - Backend como serviço:** Neste modelo, o cliente usa o backend e implementa apensar o front-end.
+
+#### Fonte:
+---
+
+- Cursos:
+[Elementos essenciais do AWS Cloud Practitioner](https://explore.skillbuilder.aws/learn/course/8287/play/93778/elementos-essenciais-do-aws-cloud-practitioner-portugues-aws-cloud-practitioner-essentials-portuguese-na) e 
+[Certificação Amazon AWS Cloud Practitioner CLF-C02 (2024)](https://www.udemy.com/course/certificacao-amazon-aws-cloud-practitioner-clf-c02/)
+
+- Simulados:
+[AWS Cloud Practitioner (CLF-C02) - Simulados em Português](https://www.udemy.com/course/aws-practitioner-em-portugues/)
+
+- Prova:
+[AWS Certified Cloud Practitioner](https://aws.amazon.com/pt/certification/certified-cloud-practitioner/?ch=sec&sec=rmg&d=1)
