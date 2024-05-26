@@ -336,7 +336,7 @@ O Well-Architected Framework se baseia em cinco pilares:
 
 **AWS Batch:** possibilita que desenvolvedores, cientistas e engenheiros executem de modo fácil e eficiente centenas de milhares de tarefas de computação em lote na AWS.
 
-**AWS Kinesis:** serviço utilizado para coletar uma grande quantidade de aplicativos transferindo para outros serviços através de streaming.
+**AWS Kinesis:** serviço utilizado para coletar, processar e analisar grandes quantidades de dados em tempo real através de streaming, transferindo esses dados para outros serviços da AWS para armazenamento ou processamento adicional.
 
 **AWS OpsWorks:** serviço de gerenciamento de configurações que oferece instâncias gerenciadas do Chef e do Puppet. O Chef e o Puppet são plataformas de automação que permitem usar código para automatizar a configuração de servidores. O OpsWorks permite usar o Chef e o Puppet para automatizar a forma como os servidores são configurados, implantados e gerenciados em instâncias do Amazon EC2 ou ambientes de computação no local.
 
