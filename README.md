@@ -322,6 +322,10 @@ O Well-Architected Framework se baseia em cinco pilares:
 ### Serviços complementares para prova
 ---
 
+**AWS Simple Queue Service - SQS:** serviço de mensageria que permite enviar, armazenar e receber mensagens entre componentes de sistemas distribuídos, garantindo a entrega e processamento assíncrono das mensagens.
+
+**AWS Simple Notification Service - SNS:** serviço de notificação que permite enviar mensagens a múltiplos destinatários simultaneamente, usando diferentes protocolos como SMS, email e HTTP, facilitando a comunicação e alertas em tempo real.
+
 **AWS EventiBridge (eventos):** é um barramento de eventos sem servidor que torna mais fácil a criação de aplicações orientadas por eventos em escala usando eventos gerados com base em suas aplicações, aplicações integradas de software como serviço (SaaS) e serviços da AWS.
 
 **AWS Data Exchange:** foi projetado para permitir que organizações descubram, acessem e compartilhem conjuntos de dados prontos para uso na nuvem. Sua função principal é facilitar a aquisição de dados de terceiros, como informações de mercado, financeiras ou de pesquisa, e disponibilizá-los de maneira segura para análises e uso posterior.
