@@ -360,6 +360,8 @@ O Well-Architected Framework se baseia em cinco pilares:
 
 **AWS account root user:** é o usuário que possui acesso a todos os recursos da conta, que é utilizado para acessar o AWS Console pela primeira vez, mas  não é recomendado para uso no dia a dia.
 
+**AWS Lightsail:** Serviço de cloud computing fácil de usar, que oferece servidores virtuais (VMs), armazenamento, e rede para executar aplicações e sites com configuração simplificada, ideal para iniciantes e projetos menores, basicamente um combo de tudo o que é necessário para rodar um projeto em cloud, possuí diversos pacotes com diferentes configurações e valores.
+
 Sequência lógica da esteira de desenvolvimento:
   - **CodeCommit:** Gerenciamento das fontes através de funções do Git.
   - **CodeBuild:** Compilação e Testes automatizados.
