@@ -48,6 +48,15 @@ Benefícios da computação em nuvem:
 
 **AWS Fargate:** é um mecanismo de computação sem servidor para contêineres. Ele funciona com o Amazon ECS e o Amazon EKS.
 
+**Resumo da relação entre esses conceitos:**
+- **Containers:** Tecnologia de virtualização leve.
+- **Docker:** Plataforma para criar e gerenciar containers.
+- **Kubernetes:** Sistema de orquestração para gerenciar grandes volumes de containers.
+- **ECS:** Serviço da AWS para orquestração de containers Docker.
+- **EKS:** Serviço da AWS para orquestração de containers Kubernetes.
+
+Docker é frequentemente usado para criar containers que podem ser gerenciados pelo Kubernetes ou ECS/EKS. ECS é mais integrado com o ecossistema AWS e pode ser mais fácil de começar, enquanto EKS permite usar Kubernetes em sua forma nativa, beneficiando-se de uma comunidade e um ecossistema mais amplos.
+
 ### Infraestrutura global e confiabilidade
 ---
 
