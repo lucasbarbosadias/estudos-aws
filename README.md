@@ -292,10 +292,12 @@ Dispositivos/serviços existentes:
 **Inovação com serviços AWS:** Para trabalhar sem servidor na AWS temos o AWS Lambda, para trabalhar com Machine learning temos o Amazon SageMaker que remove o trabalho difícil do processo de criar, treinar e implantar modelos de ML rapidamente. e para trabalhar com Inteligência artificial temos uma variedade de serviços: 
 - Receba recomendações enquanto escreve e identifica problemas de segurança no seu código com o Amazon CodeWhisperer.
 - Converter fala em texto com o Amazon Transcribe.
+- Converter texto em fala com o Amazon Polly.
 - Descobrir padrões em texto com o Amazon Comprehend.
 - Identificar atividades on-line potencialmente fraudulentas com o Amazon Fraud Detector.
 - Criar chatbots de voz e texto com o Amazon Lex.
 - Identificar pessoas, textos, objetos em imagens com Amazon Rekognition.
+- Aprendizado de máquina sobre grande volume de dados para realizar buscas de respostas precisas com Amazon Kendra.
 
 ### Jornada para nuvem
 ---
