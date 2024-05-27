@@ -307,10 +307,10 @@ Dispositivos/serviços existentes:
 
 O Well-Architected Framework se baseia em cinco pilares: 
 
-- **Excelência operacional:** é a capacidade de executar e monitorar sistemas para entregar valor comercial e melhorar continuamente os processos e procedimentos de apoio.
-- **Segurança:** inclui a capacidade de proteger informações, sistemas e ativos e, ao mesmo tempo, entregar valor comercial por meio de avaliações de risco e estratégias de mitigação. 
+- **Excelência operacional:** é a capacidade de executar e **monitorar** sistemas para entregar valor comercial e melhorar continuamente os processos e procedimentos de apoio. É tudo o que conseguimos monitorar para evitar qualquer falha, ou melhorar o processo.
+- **Segurança:** inclui a capacidade de **proteger** informações, sistemas e ativos e, ao mesmo tempo, entregar valor comercial por meio de avaliações de risco e estratégias de mitigação. 
 - **Confiabilidade:** é a capacidade de um sistema recuperar-se de interrupções na infraestrutura ou no serviço, adquirir dinamicamente recursos de computação para atender à demanda e reduzir interrupções, como configurações incorretas ou problemas de rede transitórios.
-- **Eficiência de desempenho:** é a capacidade de usar recursos computacionais com eficiência para cumprir requisitos do sistema e manter essa eficiência à medida que a demanda muda e as tecnologias evoluem. 
+- **Eficiência de desempenho:** é a capacidade de usar recursos computacionais não gastando acima do necessário mas mantendo a eficiência para cumprir requisitos do sistema à medida que a demanda muda e as tecnologias evoluem.
 - **Otimização de custos:** é a capacidade de executar sistemas para entregar valor comercial com o menor preço.
 - **Sustentabilidade:** é a capacidade de melhorar continuamente os impactos da sustentabilidade, reduzindo o consumo de energia e aumentando a eficiência em todos os componentes de uma carga de trabalho, maximizando os benefícios dos recursos provisionados e minimizando o total de recursos necessários.
 
