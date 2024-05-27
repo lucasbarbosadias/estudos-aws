@@ -297,6 +297,7 @@ Dispositivos/serviços existentes:
 - Identificar atividades on-line potencialmente fraudulentas com o Amazon Fraud Detector.
 - Criar chatbots de voz e texto com o Amazon Lex.
 - Identificar pessoas, textos, objetos em imagens com Amazon Rekognition.
+- Extrair textos de imagens com o Amazon Textract.
 - Aprendizado de máquina sobre grande volume de dados para realizar buscas de respostas precisas com Amazon Kendra.
 
 ### Jornada para nuvem
