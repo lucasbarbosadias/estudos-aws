@@ -257,6 +257,8 @@ O CloudTrail Insights é um recurso opcional que permite o CloudTrail detectar a
 
 **AWS Marketplace:** é um catálogo digital com milhares de ofertas de software de provedores independentes de software. Você pode usar o AWS Marketplace para encontrar, testar e comprar software que pode ser executado na AWS.
 
+**AWS Control tower:** é um processo que simplifica a criação de múltiplas contas em ambientes grandes, como uma organização multinacional ou empresas com mais de 50 filiais e precisam de diversas contas AWS.
+
 ### Migração e Inovação
 ---
 
