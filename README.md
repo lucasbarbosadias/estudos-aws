@@ -295,6 +295,7 @@ Dispositivos/serviços existentes:
 - Descobrir padrões em texto com o Amazon Comprehend.
 - Identificar atividades on-line potencialmente fraudulentas com o Amazon Fraud Detector.
 - Criar chatbots de voz e texto com o Amazon Lex.
+- Identificar pessoas, textos, objetos em imagens com Amazon Rekognition.
 
 ### Jornada para nuvem
 ---
