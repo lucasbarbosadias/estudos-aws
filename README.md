@@ -48,6 +48,8 @@ Benefícios da computação em nuvem:
 
 **AWS Fargate:** é um mecanismo de computação sem servidor para contêineres. Ele funciona com o Amazon ECS e o Amazon EKS.
 
+**Amazon Elastic Container Registry - ECR:** é um serviço que gerencia imagens de container docker, facilitando o armazenamento, gerenciamento e implantação.
+
 **Resumo da relação entre esses conceitos:**
 - **Containers:** Tecnologia de virtualização leve.
 - **Docker:** Plataforma para criar e gerenciar containers.
