@@ -297,7 +297,8 @@ Dispositivos/serviços existentes:
 - Receba recomendações enquanto escreve e identifica problemas de segurança no seu código com o Amazon CodeWhisperer.
 - Converter fala em texto com o Amazon Transcribe.
 - Converter texto em fala com o Amazon Polly.
-- Descobrir padrões em texto com o Amazon Comprehend.
+- Traduzir textos com o Amazon Translate.
+- Descobrir padrões ou sentimentos expressos em texto com o Amazon Comprehend.
 - Identificar atividades on-line potencialmente fraudulentas com o Amazon Fraud Detector.
 - Criar chatbots de voz e texto com o Amazon Lex.
 - Identificar pessoas, textos, objetos em imagens com Amazon Rekognition.
@@ -369,6 +370,8 @@ O Well-Architected Framework se baseia em cinco pilares:
 **AWS account root user:** é o usuário que possui acesso a todos os recursos da conta, que é utilizado para acessar o AWS Console pela primeira vez, mas  não é recomendado para uso no dia a dia.
 
 **AWS Lightsail:** Serviço de cloud computing fácil de usar, que oferece servidores virtuais (VMs), armazenamento, e rede para executar aplicações e sites com configuração simplificada, ideal para iniciantes e projetos menores, basicamente um combo de tudo o que é necessário para rodar um projeto em cloud, possuí diversos pacotes com diferentes configurações e valores.
+
+**Amazon Elastic MapReduce - EMR:** plataforma para uso de Big Data que permite o uso de tecnologias como Apache Spark, Apache Hive e Presto para executar análises em escala de petabytes por menos da metade do custo de plataformas tradicionais.
 
 Sequência lógica da esteira de desenvolvimento:
   - **CodeCommit:** Gerenciamento das fontes através de funções do Git.
