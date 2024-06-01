@@ -198,11 +198,11 @@ Permite o desenvolvimento e teste de migrações de banco de dados de produção
 
 **Grupo do IAM:** é um conjunto de usuários do IAM. Quando você atribui uma política do IAM a um grupo, todos os usuários do grupo recebem permissões especificadas pela política.
 
-**Perfil do IAM:** é uma identidade que você pode assumir para obter acesso *temporário* a permissões, em vez de um acesso de longo prazo.  Utilizada quando um funcionário alterna entre tarefas diferentes, ele abre mão do acesso a uma estação de trabalho e ganha acesso a outra, podendo alternar facilmente entre as estações de trabalho.
+**Função do IAM - IAM Role:** é uma identidade que você pode assumir para obter acesso *temporário* a permissões, em vez de um acesso de longo prazo.  Utilizada quando um funcionário alterna entre tarefas diferentes, ele abre mão do acesso a uma estação de trabalho e ganha acesso a outra, podendo alternar facilmente entre as estações de trabalho.
 
 **Autenticação com multifator:** é uma camada extra de segurança para sua conta AWS. Por exemplo quando acessamos um site e em seguida pede uma segunda forma de autenticação, como um código aleatório enviado por email ou é solicitado ao usuário que informe a resposta de autenticação de seu dispositivo MFA da AWS. Esse dispositivo pode ser uma chave de segurança de hardware, um dispositivo de hardware ou uma aplicação de MFA em um dispositivo, como um smartphone.
 
-**AWS Organizations:** consolida e gerencia múltiplas contas AWS em um local central. Podemos controlar de maneira centralizada as permissões para as contas em sua organização usando as políticas de controle de serviço (SCPs), como o que cada uma pode acessar. Podemos agrupar contas em unidades organizacionais (UO) para facilitar o gerenciamento de contas com requisitos de negócios ou segurança semelhantes.
+**AWS Organizations:** consolida e gerencia múltiplas contas AWS em um local central. Podemos controlar de maneira centralizada as permissões para as contas em sua organização usando as políticas de controle de serviço (`SCPs`), como o que cada uma pode acessar. Podemos agrupar contas em unidades organizacionais (`UO`) para facilitar o gerenciamento de contas com requisitos de negócios ou segurança semelhantes.
 
 **AWS Artifact:** é um serviço que concede acesso sob demanda a relatórios de segurança e conformidade da AWS e a contratos on-line selecionados. Dependendo do setor de sua empresa, talvez seja necessário manter padrões específicos. Uma auditoria ou inspeção assegurará que a empresa cumpriu esses padrões, e para isso usamos o Artifact.
 
@@ -211,13 +211,13 @@ Permite o desenvolvimento e teste de migrações de banco de dados de produção
 **AWS Artifact Reports:** oferece relatórios de conformidade por auditores terceirizados. Esses auditores testaram e verificaram se a AWS está em conformidade com diversas normas e regulamentações de segurança globais, regionais e específicas do setor. Bom para desenvolvedores que estão criando algo e precisam ver se estão seguindo a conformidade com padrões regulatórios.
 AWS possuí o *centro de conformidade para o cliente*, onde contém recursos que ajudam a saber mais sobre a conformidade da AWS, como histórias de clientes e casos de uso.
 
-**AWS Shield:** é um serviço que protege aplicações contra ataques DDoS. O AWS Shield oferece dois níveis de proteção: 
+**AWS Shield:** é um serviço que protege aplicações contra ataques `DDoS`. O AWS Shield oferece dois níveis de proteção: 
 - **Standard:** protege automaticamente todos os clientes AWS sem nenhum custo. Ele protege seus recursos AWS contra os tipos de ataques DDoS mais comuns e frequentes. 
-- **Advanced:** é um serviço pago que fornece diagnósticos detalhados de ataques e a capacidade de detectar e mitigar ataques elaborados de DDoS. Ele também se integra a outros serviços, como o Amazon CloudFront, o Amazon Route 53 e o Elastic Load Balancing. Além disso, você pode integrar o AWS Shield ao AWS WAF escrevendo regras personalizadas para mitigar ataques complexos de DDoS.
+- **Advanced:** é um serviço pago que fornece diagnósticos detalhados de ataques e a capacidade de detectar e mitigar ataques elaborados de DDoS. Ele também se integra a outros serviços, como o `Amazon CloudFront`, o `Amazon Route 53` e o `Elastic Load Balancing`. Além disso, você pode integrar o AWS Shield ao `AWS WAF` escrevendo regras personalizadas para mitigar ataques complexos de DDoS.
 
 **AWS Key Management Service - AWS KMS**: permite executar operações de criptografia utilizando chaves. As chaves são uma cadeia aleatória de digítos utilizada para criptografar e descriptografar dados. Com o KMS podemos gerenciar essas chaves.
 
-**AWS WAF:** é um firewall de aplicação web que permite monitorar solicitações de rede que entram em aplicações web. Ele trabalha em conjunto com o Amazon CloudFront e um Application Load Balancer. Basicamente ele permite ou bloqueia o tráfego na rede, ele faz isso usando uma lista de controle de acesso (ACL) da web para proteger os recursos da AWS.
+**AWS WAF:** é um `firewall` de aplicação web que permite monitorar solicitações de rede que entram em aplicações web. Ele trabalha em conjunto com o `Amazon CloudFront` e um `Application Load Balancer`. Basicamente ele permite ou bloqueia o tráfego na rede, ele faz isso usando uma *lista de controle de acesso* (`ACL`) da web para proteger os recursos da AWS.
 
 **Amazon Inspector:** ajuda a melhorar a segurança e a conformidade das aplicações executando avaliações de segurança automatizadas. Ele verifica os aplicativos quanto a vulnerabilidades de segurança e desvios das práticas recomendadas de segurança, como acesso aberto a instâncias do Amazon EC2 e instalações de versões de software vulneráveis.
 
