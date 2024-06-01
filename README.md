@@ -264,10 +264,10 @@ O `CloudTrail Insights` é um recurso opcional que permite o CloudTrail detectar
 ### Migração e Inovação
 ---
 
-**AWS Cloud Adoption Framework - AWS CAF:** possuí orientações para cada parte da empresa, sobre o que cada um precisa saber ao realizar uma migração para AWS. As orientações são organizadas em seis áreas de foco chamadas perspectivas. Cada perspectiva aborda responsabilidades distintas. 
+**AWS Cloud Adoption Framework - AWS CAF:** possuí orientações para cada parte da empresa, sobre o que cada um precisa saber ao realizar uma migração para AWS. As orientações são organizadas em seis áreas de foco chamadas `perspectivas`. Cada perspectiva aborda responsabilidades distintas. 
 O processo de planejamento ajuda as pessoas certas em toda a organização a se prepararem para as mudanças futuras.
 
-Em geral, as perspectivas de negócio, pessoas e governança se concentram nos recursos comerciais, enquanto as perspectivas de plataforma, segurança e operações se concentram em capacidades técnicas.
+Em geral, as perspectivas de `negócio`, `pessoas` e `governança` se concentram nos `recursos comerciais`, enquanto as perspectivas de `plataforma`, `segurança` e `operações` se concentram em `capacidades técnicas`.
 
 - **Perspectiva de negócio:** Para gerentes de negócios, gerentes financeiros, proprietários de orçamento e stakeholders de estratégia. Garante que a TI esteja alinhada com às necessidades de negócio e que os investimentos em TI estejam vinculados aos principais resultados de negócios.
 - **Perspectiva de pessoas:** Para recursos humanos, equipe e gerente de pessoas. Promove o desenvolvimento de uma estratégia de alterações em toda organização para adoção bem-sucedida da nuvem.
