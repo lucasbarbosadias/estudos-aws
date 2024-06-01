@@ -229,9 +229,9 @@ AWS possuí o *centro de conformidade para o cliente*, onde contém recursos que
 **Amazon CloudWatch:** é um serviço da web que permite monitorar e gerenciar várias métricas e configurar ações de alarme de acordo com os dados dessas métricas que vão executar ações automaticamente se o valor da métrica ultrapassar ou for inferior a um limite predefinido. O recurso de painel do CloudWatch permite que você acesse todas as métricas dos seus recursos em um único local.
 
 **AWS CloudTrail:** utilizado para auditoria, com ele podemos rastrear atividades dos usuários e solicitações de APIs em toda infraestrutura da AWS. Filtros por logs para auxiliar análises operacional e solução de problemas. Ele registra informações como chamador da API, hora da chamada da API, endereço IP de origem do chamador da API e muito mais.
-O CloudTrail Insights é um recurso opcional que permite o CloudTrail detectar automaticamente atividades de API incomuns em sua conta AWS.
+O `CloudTrail Insights` é um recurso opcional que permite o CloudTrail detectar automaticamente atividades de API incomuns em sua conta AWS.
 
-**AWS Trusted Advisor:** é um serviço da web que inspeciona seu ambiente AWS e faz recomendações em tempo real de acordo com as práticas recomendadas da AWS. Ele faz as verificações seguindo os cinco pilares: otimização de custos, desempenho, segurança, tolerância a falhas e limites de serviço. Para cada um desses ele retorna uma lista de ações recomendadas (vermelho), investigações recomendadas (amarelo) e nenhum problema foi detectado (verde).
+**AWS Trusted Advisor:** é um serviço da web que inspeciona seu ambiente AWS e faz recomendações em tempo real de acordo com as práticas recomendadas da AWS. Ele faz as verificações seguindo os cinco pilares: `otimização de custos`, `desempenho`, `segurança`, `tolerância a falhas` e `limites de serviço`. Para cada um desses ele retorna uma lista de ações recomendadas (vermelho), investigações recomendadas (amarelo) e nenhum problema foi detectado (verde).
 
 ### Definição de preços e suporte
 ---
