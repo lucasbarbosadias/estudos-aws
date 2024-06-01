@@ -293,17 +293,17 @@ Dispositivos/serviços existentes:
 - **AWS Snowball:** Aqui existem dois tipos de dispositivos: **Snowball Edge Storage Optimized** são ideais para migrações de dados de grande escala e fluxos de trabalho de transferência recorrentes, em além da computação local com necessidades maiores de capacidade. Armazenamento: 80 TB de capacidade de disco rígido (HDD) para volumes de blocos e armazenamento de objeto compatível com o Amazon S3, além de unidade de estado sólido (SSD) do SATA de 1 TB para volumes de blocos. Computação: 40 vCPUs e 80 GiB de memória para dar suporte a instâncias sbe1 do Amazon EC2 (equivalente a C5). O **Snowball Edge Compute Optimized** fornece recursos de computação poderosos para casos de uso, como machine learning, análise de vídeo em movimento completo, análise e pilhas de computação locais. Armazenamento: capacidade de HDD utilizável de 80 TB para armazenamento de objeto compatível com o Amazon S3 ou volumes de blocos compatíveis com o Amazon EBS e também 28 TB de capacidade de SSD NVMe utilizável para volumes de blocos compatíveis com o Amazon EBS. Computação: 104 vCPUs, 416 GiB de memória e uma GPU NVIDIA Tesla V100 opcional. Os dispositivos executam as instâncias sbe-c e sbe-g do Amazon EC2, que são equivalentes às instâncias C5, M5a, G3 e P3.
 - **AWS Snowmobile:** é um serviço de transferência de dados na escala de exabytes usado para mover grandes quantidades de dados para a nuvem AWS. Você pode transferir até 100 petabytes de dados por Snowmobile, um contêiner de transporte reforçado com 13,71 metros de comprimento puxado por um caminhão semirreboque.
 
-**Inovação com serviços AWS:** Para trabalhar sem servidor na AWS temos o AWS Lambda, para trabalhar com Machine learning temos o Amazon SageMaker que remove o trabalho difícil do processo de criar, treinar e implantar modelos de ML rapidamente. e para trabalhar com Inteligência artificial temos uma variedade de serviços: 
-- Receba recomendações enquanto escreve e identifica problemas de segurança no seu código com o Amazon CodeWhisperer.
-- Converter fala em texto com o Amazon Transcribe.
-- Converter texto em fala com o Amazon Polly.
-- Traduzir textos com o Amazon Translate.
-- Descobrir padrões ou sentimentos expressos em texto com o Amazon Comprehend.
-- Identificar atividades on-line potencialmente fraudulentas com o Amazon Fraud Detector.
-- Criar chatbots de voz e texto com o Amazon Lex.
-- Identificar pessoas, textos, objetos em imagens com Amazon Rekognition.
-- Extrair textos de imagens com o Amazon Textract.
-- Aprendizado de máquina sobre grande volume de dados para realizar buscas de respostas precisas com Amazon Kendra.
+**Inovação com serviços AWS:** Para trabalhar sem servidor na AWS temos o `AWS Lambda`, para trabalhar com Machine learning temos o `Amazon SageMaker` que remove o trabalho difícil do processo de criar, treinar e implantar modelos de ML rapidamente. e para trabalhar com Inteligência artificial temos uma variedade de serviços: 
+- Receba recomendações enquanto escreve e identifica problemas de segurança no seu código com o `Amazon CodeWhisperer`.
+- Converter fala em texto com o `Amazon Transcribe`.
+- Converter texto em fala com o `Amazon Polly`.
+- Traduzir textos com o `Amazon Translate`.
+- Descobrir padrões ou sentimentos expressos em texto com o `Amazon Comprehend`.
+- Identificar atividades on-line potencialmente fraudulentas com o `Amazon Fraud Detector`.
+- Criar chatbots de voz e texto com o `Amazon Lex`.
+- Identificar pessoas, textos, objetos em imagens com `Amazon Rekognition`.
+- Extrair textos de imagens com o `Amazon Textract`.
+- Aprendizado de máquina sobre grande volume de dados para realizar buscas de respostas precisas com `Amazon Kendra`.
 
 ### Jornada para nuvem
 ---
@@ -339,7 +339,7 @@ O Well-Architected Framework se baseia em cinco pilares:
 
 **AWS Data Exchange:** foi projetado para permitir que organizações descubram, acessem e compartilhem conjuntos de dados prontos para uso na nuvem. Sua função principal é facilitar a aquisição de dados de terceiros, como informações de mercado, financeiras ou de pesquisa, e disponibilizá-los de maneira segura para análises e uso posterior.
 
-**AWS CloudFormation:** serviço de infraestrutura como código (IAC) que permite definir e provisionar recursos na nuvem de forma automatizada.
+**AWS CloudFormation:** serviço de infraestrutura como código (`IAC`) que permite definir e provisionar recursos na nuvem de forma automatizada.
 
 **AWS IQ:** permite que os clientes encontrem, contratem e paguem rapidamente especialistas terceirizados certificados pela AWS para trabalhos sob demanda em um projeto.
 
@@ -349,9 +349,9 @@ O Well-Architected Framework se baseia em cinco pilares:
 
 **AWS Batch:** possibilita que desenvolvedores, cientistas e engenheiros executem de modo fácil e eficiente centenas de milhares de tarefas de computação em lote na AWS.
 
-**AWS Kinesis:** serviço utilizado para coletar, processar e analisar grandes quantidades de dados em tempo real através de streaming, transferindo esses dados para outros serviços da AWS para armazenamento ou processamento adicional.
+**AWS Kinesis:** serviço utilizado para coletar, processar e analisar grandes quantidades de dados em tempo real através de `streaming`, transferindo esses dados para outros serviços da AWS para armazenamento ou processamento adicional.
 
-**AWS OpsWorks:** serviço de gerenciamento de configurações que oferece instâncias gerenciadas do Chef e do Puppet. O Chef e o Puppet são plataformas de automação que permitem usar código para automatizar a configuração de servidores. O OpsWorks permite usar o Chef e o Puppet para automatizar a forma como os servidores são configurados, implantados e gerenciados em instâncias do Amazon EC2 ou ambientes de computação no local.
+**AWS OpsWorks:** serviço de gerenciamento de configurações que oferece instâncias gerenciadas do `Chef` e do `Puppet`. O Chef e o Puppet são plataformas de automação que permitem usar código para automatizar a configuração de servidores. O OpsWorks permite usar o Chef e o Puppet para automatizar a forma como os servidores são configurados, implantados e gerenciados em instâncias do `Amazon EC2` ou ambientes de computação no local.
 
 **AWS Wavelength:** é uma região geográfica especializada da AWS que fornece infraestrutura de computação na borda das redes de telecomunicações. Ele é projetado para permitir a execução de cargas de trabalho de baixa latência, reduzindo o tempo de ida e volta entre os aplicativos e os usuários finais.
 
@@ -363,7 +363,7 @@ O Well-Architected Framework se baseia em cinco pilares:
 
 **AWS Compute Optimizer:** utiliza o aprendizado de máquina (machine learning) para identificar configurações ideais de recursos na AWS, analisando métricas de utilização, como instâncias do EC2, volumes do EBS, tarefas do ECS no AWS Fargate e memória do AWS Lambda, analisando métricas de utilização. Ele oferece sugestões intuitivas e simples de implementar para melhorar o desempenho e reduzir despesas em cargas de trabalho na AWS.
 
-**Amazon Macie:** é um serviço de segurança e privacidade de dados totalmente gerenciado que usa machine learning e correspondência de padrões para descobrir e proteger seus dados confidenciais na AWS. À medida que as organizações gerenciam volumes crescentes de dados, identificar e proteger seus dados confidenciais em escala pode se tornar cada vez mais complexo, caro e demorado. O Amazon Macie automatiza a descoberta de dados confidenciais em escala e reduz o custo da proteção de seus dados
+**Amazon Macie:** é um serviço de segurança e privacidade de dados totalmente gerenciado que usa machine learning e correspondência de padrões para descobrir e proteger seus dados confidenciais na AWS. À medida que as organizações gerenciam volumes crescentes de dados, identificar e proteger seus dados confidenciais em escala pode se tornar cada vez mais complexo, caro e demorado. O Amazon Macie automatiza a descoberta de dados confidenciais em escala e reduz o custo da proteção de seus dados.
 
 **AWS Storage Gateway:** é um conjunto de serviços de nuvem híbrida que oferece acesso on-premises a armazenamento na nuvem praticamente ilimitado. Os clientes usam o Storage Gateway para integrar o armazenamento da Nuvem AWS com workloads locais para que possam simplificar o gerenciamento do armazenamento e reduzir os custos de casos de uso de armazenamento fundamentais na nuvem híbrida.
 
@@ -377,13 +377,13 @@ Sequência lógica da esteira de desenvolvimento:
   - **CodeCommit:** Gerenciamento das fontes através de funções do Git.
   - **CodeBuild:** Compilação e Testes automatizados.
   - **CodeDeploy:** Implantação.
-Os serviços apresentados são orquestrados através do serviço CodePipeline, que é a esteira que integra todos os serviços mencionados na questão.
+Os serviços apresentados são orquestrados através do serviço `CodePipeline`, que é a esteira que integra todos os serviços mencionados na questão.
 
 **Tipo de uso de cloud:**
 - **IaaS - Infraestrutura como serviço:** Neste modelo, o cliente precisa gerenciar todos os recursos que precisa implementar na cloud.
 - **PaaS - Plataforma como serviço:** Neste modelo, o cliente só precisa desenvolver o software sobre a plataforma.
 - **SaaS - Software como serviço:** Neste modelo, o cliente usa o software pronto.
-- **BaaS - Backend como serviço:** Neste modelo, o cliente usa o backend e implementa apensar o front-end.
+- **BaaS - Backend como serviço:** Neste modelo, o cliente usa o backend e implementa apenas o front-end.
 
 #### Fonte:
 ---
