@@ -254,7 +254,7 @@ O `CloudTrail Insights` é um recurso opcional que permite o CloudTrail detectar
 - Enterprise On-Ramp
 - Enterprise
 
-**Technical Account Manager - TAM:** principal ponto de contato com a AWS. Disponível apenas para assinaturas Support Empresarial de Grande Porte ou Empresarial Rápido, o TAM educa, capacita e desenvolve sua jornada para a nuvem em toda a gama de serviços da AWS. Prestam orientação especializada em engenharia, ajuda na projeção de soluções que integram com eficiência os serviços da AWS, auxiliam com arquiteturas econômicas e resilientes e concedem acesso direto aos programas da AWS e a uma ampla comunidade de especialistas.
+**Technical Account Manager - TAM:** principal ponto de contato com a AWS. Disponível apenas para assinaturas Support *Enterprise On-Ramp* ou *Enterprise*, o TAM educa, capacita e desenvolve sua jornada para a nuvem em toda a gama de serviços da AWS. Prestam orientação especializada em engenharia, ajuda na projeção de soluções que integram com eficiência os serviços da AWS, auxiliam com arquiteturas econômicas e resilientes e concedem acesso direto aos programas da AWS e a uma ampla comunidade de especialistas.
 
 **AWS Marketplace:** é um catálogo digital com milhares de ofertas de software de provedores independentes de software. Você pode usar o AWS Marketplace para encontrar, testar e comprar software que pode ser executado na AWS.
 
