@@ -108,8 +108,7 @@ Redes globais:
 **Simple Storage Service - S3:** Armazenamento de objetos, consiste em dados, metadados e uma chave. Dados podem ser qualquer tipo de arquivo, metadados contém informações sobre o tipo do dado, tamanho e assim por diante. Chave é seu identificador único. Dados são armazenados como objetos em buckets.
 Podemos armazenar arquivos de backup, mídia, documentos diversos e possuí espaço ilimitado, o tamanho máximo de arquivo para um objeto é de `5tb`. Possuí permissionamento de visibilidade e acesso aos arquivos e versionamento.
 
-Storage classes do S3: Pague somente pelo uso
-Para escolher uma precisamos considerar:
+**Storage classes do S3:** Pague somente pelo uso. Para escolher uma precisamos considerar:
 
 ```md
 - Com que frequência você planeja recuperar seus dados
@@ -247,7 +246,7 @@ O `CloudTrail Insights` é um recurso opcional que permite o CloudTrail detectar
 
 **AWS Cost Explorer:** é uma ferramenta que permite visualizar, interpretar e gerenciar seus custos e uso da AWS ao longo do tempo. Lista o valor gasto por cada recurso da AWS, pode filtrar por datas, tags, entre outros para ver relatórios específicos e realizar análise de gastos.
 
-**Planos AWS Suporte:** a AWS oferece quatro planos de suporte diferentes para ajudar a solucição de problemas, reduzir custos e usar os serviços da AWS de maneira eficiente:
+**Planos AWS Suporte:** a AWS oferece quatro planos de suporte diferentes para ajudar a solução de problemas, reduzir custos e usar os serviços da AWS de maneira eficiente:
 
 - Basic
 - Desenvolvedor
