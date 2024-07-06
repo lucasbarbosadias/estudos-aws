@@ -249,10 +249,10 @@ O `CloudTrail Insights` é um recurso opcional que permite o CloudTrail detectar
 **Planos AWS Suporte:** a AWS oferece quatro planos de suporte diferentes para ajudar a solução de problemas, reduzir custos e usar os serviços da AWS de maneira eficiente:
 
 - Basic
-- Desenvolvedor
-- Empresarial
-- Empresarial Rápido
-- Empresarial de Grande Porte
+- Developer
+- Business
+- Enterprise On-Ramp
+- Enterprise
 
 **Technical Account Manager - TAM:** principal ponto de contato com a AWS. Disponível apenas para assinaturas Support Empresarial de Grande Porte ou Empresarial Rápido, o TAM educa, capacita e desenvolve sua jornada para a nuvem em toda a gama de serviços da AWS. Prestam orientação especializada em engenharia, ajuda na projeção de soluções que integram com eficiência os serviços da AWS, auxiliam com arquiteturas econômicas e resilientes e concedem acesso direto aos programas da AWS e a uma ampla comunidade de especialistas.
 
